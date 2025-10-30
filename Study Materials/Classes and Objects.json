@@ -1,232 +1,257 @@
 {
-  "deckName": "ISC Class 12 Computer Science - Classes and Objects",
+  "deckName": "Java Classes & Constructors",
   "flashcards": [
     {
       "id": 1,
-      "question": "What is a class in Java and how is it different from an object?",
-      "answer": "A class is a blueprint or template that defines the properties and behaviors of objects, while an object is a specific instance created from that class.",
-      "category": "Introduction to Classes",
-      "detailedExplanation": "A class in Java is a fundamental building block of object-oriented programming. It serves as a blueprint that defines what properties (attributes) and behaviors (methods) the objects of that class will have. Think of a class like a recipe - it describes how to make something but isn't the actual thing itself. For example, a 'Car' class would define that all cars have properties like color, speed, and brand, and behaviors like start(), stop(), and accelerate().\n\nAn object, on the other hand, is a concrete instance created from the class blueprint. Using our car analogy, if 'Car' is the class, then 'myRedCar' would be an object - a specific car with actual values for color, speed, etc. Each object created from the same class has the same structure but can have different values for its properties.\n\nClasses help in organizing code and implementing real-world entities in programming. They encapsulate data and methods that operate on that data, promoting code reusability and maintainability. Understanding the relationship between classes and objects is crucial for object-oriented programming.",
+      "question": "What is a class in Java?",
+      "answer": "A blueprint/template/prototype that describes characteristics (data) and behavior (functions) of objects",
+      "category": "Java OOP",
+      "detailedExplanation": "A class is the fundamental building block of Object-Oriented Programming in Java. It serves as a template that defines the structure and behavior that objects created from it will possess. A class encapsulates data members (variables) and member methods (functions) that operate on that data.\n\nThe class itself doesn't occupy memory - it's just a definition. When objects are created from the class (instantiated), they get their own copies of the data members while sharing the same methods. This concept allows for code reusability, organization, and implements key OOP principles like encapsulation and data hiding.",
       "keyPoints": [
-        "Class is a blueprint, object is an instance",
-        "Defines properties (variables) and behaviors (methods)",
-        "Supports encapsulation and code organization",
-        "Enables object-oriented programming"
+        "Blueprint for creating objects",
+        "Contains data members and member methods",
+        "Doesn't occupy memory itself",
+        "Enables encapsulation and data hiding"
       ],
       "examples": [
-        "Class: Student, Object: student1 with name 'John', rollNo 101",
-        "Class: BankAccount, Object: account1 with balance 5000",
-        "Class: Rectangle, Object: rect1 with length 5, width 3"
+        "class Car { String color; int speed; void accelerate() {...} }",
+        "class Student { String name; int rollNo; void study() {...} }"
       ]
     },
     {
       "id": 2,
-      "question": "What are the different types of variables in a class and how do they differ?",
-      "answer": "Instance variables, static variables, and local variables - distinguished by scope, lifetime, and memory allocation.",
-      "category": "Variables in Classes",
-      "detailedExplanation": "In Java classes, there are three main types of variables with different characteristics. Instance variables are declared inside a class but outside any method, and they belong to individual objects. Each object gets its own copy of instance variables, and they exist as long as the object exists. They store the state of individual objects.\n\nStatic variables (class variables) are declared with the 'static' keyword and belong to the class itself rather than any particular object. All objects of the class share the same static variable, and it exists throughout the program's execution. Static variables are used for properties common to all objects, like counting the number of objects created.\n\nLocal variables are declared inside methods, constructors, or blocks and exist only during the execution of that method or block. They must be initialized before use and cannot have access modifiers. Understanding these differences is important for proper variable usage and memory management in Java programs.",
+      "question": "What are the three types of variables in a class?",
+      "answer": "Instance variables, Class variables (static), and Local variables",
+      "category": "Java Variables",
+      "detailedExplanation": "Java classes can contain three distinct types of variables, each with different scope and lifetime:\n\n1. **Instance Variables**: Declared within the class but outside any method. Each object gets its own separate copy. They represent the 'state' of individual objects.\n\n2. **Class Variables (Static)**: Declared with the 'static' keyword. Only one copy exists per class, shared by all objects. Used for class-level properties.\n\n3. **Local Variables**: Declared within methods. Their scope is limited to the method block where they're declared. Used for temporary storage during method execution.",
       "keyPoints": [
-        "Instance variables: Unique to each object",
-        "Static variables: Shared by all objects of the class",
-        "Local variables: Temporary, exist only in methods",
-        "Different scope, lifetime, and memory allocation"
+        "Instance variables - separate for each object",
+        "Class variables - shared across all objects",
+        "Local variables - limited to method scope",
+        "Static variables use 'static' keyword"
       ],
       "examples": [
-        "Instance: 'name' in Student class - different for each student",
-        "Static: 'studentCount' in Student class - shared counter",
-        "Local: 'temp' variable inside calculateTotal() method"
+        "Instance: 'int age;' in class Person",
+        "Class: 'static int count;' as object counter",
+        "Local: 'int i;' inside a for loop in a method"
       ]
     },
     {
       "id": 3,
-      "question": "What are access modifiers and what is the purpose of each?",
-      "answer": "Public, private, protected, and default - they control the visibility and accessibility of class members.",
-      "category": "Access Modifiers",
-      "detailedExplanation": "Access modifiers in Java determine the visibility and accessibility of classes, methods, and variables. The 'public' modifier provides the widest accessibility - public members can be accessed from any other class. This is commonly used for methods that need to be called from outside the class.\n\nThe 'private' modifier is the most restrictive - private members can only be accessed within the same class. This is used to implement encapsulation by hiding internal implementation details and protecting data from unauthorized access.\n\nThe 'protected' modifier allows access within the same package and by subclasses (even if they are in different packages). This is useful when you want to provide access to derived classes while restricting access from unrelated classes.\n\nWhen no modifier is specified (default access), the member is accessible only within classes of the same package. Choosing the right access modifier is crucial for maintaining proper encapsulation and designing secure, maintainable code.",
+      "question": "What are access specifiers and what are the three main types?",
+      "answer": "Keywords that define the scope/visibility of class members: private, public, and protected",
+      "category": "Java Access Control",
+      "detailedExplanation": "Access specifiers (also called visibility modes) control which parts of your program can access specific class members (variables and methods). They are essential for implementing encapsulation and data hiding.\n\n**Private**: Members are accessible only within the class itself. This provides the highest level of protection.\n\n**Public**: Members are accessible from anywhere in the program - both inside and outside the class.\n\n**Protected**: Members act as private for the class itself but can be accessed by subclasses during inheritance.\n\nIf no access specifier is provided, the member has 'default' (package-private) accessibility.",
       "keyPoints": [
-        "Public: Accessible from anywhere",
-        "Private: Accessible only within same class",
-        "Protected: Accessible in package and subclasses",
-        "Default: Accessible only within same package"
+        "Private - only within the class",
+        "Public - accessible from anywhere",
+        "Protected - accessible in class and subclasses",
+        "Default - package-private access"
       ],
       "examples": [
-        "Public: main() method, getter/setter methods",
-        "Private: internal data fields like 'balance'",
-        "Protected: methods for subclass access",
-        "Default: helper methods within package"
+        "private int salary; // Only accessible within class",
+        "public String name; // Accessible from anywhere",
+        "protected void calculate() {...} // Accessible in subclasses"
       ]
     },
     {
       "id": 4,
-      "question": "What are static members and when should they be used?",
-      "answer": "Static members belong to the class rather than objects and are used for properties/methods common to all objects.",
-      "category": "Static Members",
-      "detailedExplanation": "Static members in Java are associated with the class itself rather than with individual objects. Static variables (class variables) are shared by all instances of the class. When one object changes a static variable, the change is visible to all other objects of that class. They are commonly used for constants, counters, or shared resources.\n\nStatic methods belong to the class and can be called without creating an object of the class. They can only access static variables and call other static methods directly. Static methods are often used for utility functions that don't require object state, like mathematical operations.\n\nStatic members are initialized when the class is loaded into memory, before any objects are created. They exist throughout the program's execution. Using static members appropriately can improve memory efficiency and provide functionality that doesn't depend on object state.",
+      "question": "What is a constructor and what are its key features?",
+      "answer": "A special member method that initializes instance variables when an object is created",
+      "category": "Java Constructors",
+      "detailedExplanation": "A constructor is a special type of method that's automatically called when an object is instantiated. Its primary purpose is to initialize the instance variables of the newly created object.\n\nKey Features:\n- Has the exact same name as the class\n- No return type (not even void)\n- Automatically called when object is created using 'new'\n- Used only for initialization, not for general operations\n- Always declared public\n- Can be overloaded (multiple constructors with different parameters)\n- If no constructor is defined, Java provides a default constructor",
       "keyPoints": [
-        "Belong to class, not individual objects",
-        "Shared by all instances of the class",
-        "Can be accessed without object creation",
-        "Used for common properties and utility methods"
+        "Same name as class",
+        "No return type",
+        "Automatically called on object creation",
+        "Used for initialization only",
+        "Always public"
       ],
       "examples": [
-        "Static variable: 'count' to track number of objects",
-        "Static method: Math.sqrt() for square root calculation",
-        "Static constant: Math.PI for pi value"
+        "class Student { Student() { // default constructor }}",
+        "class Car { Car(String model) { this.model = model; }}"
       ]
     },
     {
       "id": 5,
-      "question": "What is the 'this' keyword and what are its main uses?",
-      "answer": "'this' refers to the current object and is used to distinguish instance variables from parameters and to call other constructors.",
-      "category": "this keyword",
-      "detailedExplanation": "The 'this' keyword in Java is a reference to the current object - the object whose method or constructor is being called. One of its primary uses is to resolve naming conflicts between instance variables and method parameters. When a parameter has the same name as an instance variable, 'this' helps distinguish between them.\n\nAnother important use is to call one constructor from another in the same class, known as constructor chaining. This helps avoid code duplication and ensures proper initialization. The 'this()' call must be the first statement in the constructor.\n\n'this' can also be used to pass the current object as a parameter to other methods or to return the current object from a method. Understanding how to use 'this' correctly is essential for writing clear, unambiguous code and implementing method chaining patterns.",
+      "question": "What are the main types of constructors?",
+      "answer": "Default constructor, Non-parameterised constructor, Parameterised constructor, and Copy constructor",
+      "category": "Java Constructors",
+      "detailedExplanation": "Constructors can be categorized into four main types based on their parameters and functionality:\n\n1. **Default Constructor**: Provided by Java if no constructor is defined. Initializes variables with default values (0, null, false).\n\n2. **Non-parameterised Constructor**: Takes no parameters. Initializes variables with fixed values defined in constructor body.\n\n3. **Parameterised Constructor**: Takes parameters to initialize variables with values passed during object creation.\n\n4. **Copy Constructor**: Takes an object of same class as parameter and copies its values to the new object. Can be implemented by passing object or assigning object.",
       "keyPoints": [
-        "Refers to current object instance",
-        "Resolves naming conflicts between variables and parameters",
-        "Used for constructor chaining with this()",
-        "Can pass current object to other methods"
+        "Default - provided by Java, sets default values",
+        "Non-parameterised - no parameters, fixed values",
+        "Parameterised - takes parameters for initialization",
+        "Copy - copies values from existing object"
       ],
       "examples": [
-        "this.name = name (distinguishing instance variable from parameter)",
-        "this() calling another constructor",
-        "return this (for method chaining)"
+        "Default: Java provides if none written",
+        "Non-param: Student() { age = 18; }",
+        "Param: Student(String n) { name = n; }",
+        "Copy: Student(Student s) { this.name = s.name; }"
       ]
     },
     {
       "id": 6,
-      "question": "What are constructors and what are their main features?",
-      "answer": "Constructors are special methods that initialize objects when they are created, with features like automatic invocation and no return type.",
-      "category": "Constructors",
-      "detailedExplanation": "Constructors are special methods in Java that are called automatically when an object is created using the 'new' keyword. Their primary purpose is to initialize the newly created object. Constructors have the same name as the class and do not have a return type, not even void.\n\nKey features of constructors include: they are called automatically when objects are created, they don't have a return type, they can be overloaded (multiple constructors with different parameters), and if no constructor is defined, Java provides a default no-argument constructor. Constructors can have access modifiers to control which classes can create objects.\n\nConstructors ensure that objects start in a valid state by initializing instance variables. They can perform any setup operations needed before the object is ready for use. Proper constructor design is crucial for creating robust, well-initialized objects.",
+      "question": "What is the 'this' keyword and what are its main uses?",
+      "answer": "A reference variable that refers to the current object",
+      "category": "Java Keywords",
+      "detailedExplanation": "The 'this' keyword is a special reference variable in Java that always points to the current object - the object through which the method was called. It's particularly useful in several scenarios:\n\n1. **Eliminating Ambiguity**: When instance variables and method parameters have the same name, 'this' distinguishes instance variables.\n\n2. **Referring to Current Object**: To explicitly refer to the current object's members within methods.\n\n3. **Constructor Chaining**: To call one constructor from another in the same class.\n\n4. **Passing Current Object**: To pass the current object as a parameter to other methods.\n\n5. **Returning Current Object**: To return the current object from methods.",
       "keyPoints": [
-        "Same name as class, no return type",
-        "Called automatically when object is created",
-        "Used to initialize object state",
-        "Can be overloaded with different parameters"
+        "Refers to current object",
+        "Solves naming conflicts",
+        "Used for constructor chaining",
+        "Can pass 'this' as method parameter"
       ],
       "examples": [
-        "Student s = new Student() - calls default constructor",
-        "Rectangle r = new Rectangle(5, 3) - parameterized constructor",
-        "Multiple constructors with different parameter lists"
+        "void setData(int age) { this.age = age; }",
+        "Student() { this(\"Unknown\"); } // calling another constructor",
+        "return this; // returning current object"
       ]
     },
     {
       "id": 7,
-      "question": "What are the different types of constructors and how do they differ?",
-      "answer": "Default (no-argument), parameterized, and overloaded constructors - distinguished by parameters and initialization approach.",
-      "category": "Types of Constructors",
-      "detailedExplanation": "Java supports several types of constructors to provide flexibility in object initialization. The default constructor (no-argument constructor) takes no parameters and initializes objects with default values. If no constructor is explicitly defined, Java automatically provides a default constructor that initializes instance variables to their default values (0, null, false, etc.).\n\nParameterized constructors accept parameters to initialize objects with specific values provided during object creation. This allows different objects to start with different initial states based on the values passed to the constructor.\n\nConstructor overloading occurs when a class has multiple constructors with different parameter lists. This provides multiple ways to initialize objects, giving programmers flexibility in how they create objects. The appropriate constructor is called based on the arguments provided when creating the object. Overloaded constructors often call each other using 'this()' to avoid code duplication.",
+      "question": "What are static members and what are their characteristics?",
+      "answer": "Class-level members (variables/methods) that belong to the class rather than individual objects",
+      "category": "Java Static",
+      "detailedExplanation": "Static members are declared using the 'static' keyword and have class-level scope rather than object-level scope.\n\n**Static Variables (Class Variables)**:\n- Only one copy per class, shared by all objects\n- Created when program starts, destroyed when program ends\n- Often used as counters or accumulators\n- Can be constants when declared 'static final'\n\n**Static Methods**:\n- Belong to class, not to any object\n- Can be called without creating objects\n- Can only access static data members\n- Cannot call non-static methods directly\n- Cannot use 'this' keyword\n\nStatic members are accessed using class name: ClassName.staticMember",
       "keyPoints": [
-        "Default: No parameters, default initialization",
-        "Parameterized: Takes parameters for specific initialization",
-        "Overloaded: Multiple constructors with different parameters",
-        "Provides flexibility in object creation"
+        "One copy per class (not per object)",
+        "Shared by all objects of the class",
+        "Static methods can only use static data",
+        "Accessed via class name"
       ],
       "examples": [
-        "Student() - default constructor",
-        "Student(String name, int rollNo) - parameterized",
-        "Student(String name) and Student(int rollNo) - overloaded"
+        "static int studentCount; // shared counter",
+        "static void displayCount() { ... } // class method",
+        "Student.studentCount // accessing via class name"
       ]
     },
     {
       "id": 8,
-      "question": "How can objects be passed as parameters to methods and what are the implications?",
-      "answer": "Objects are passed by reference, allowing methods to modify the original object's state.",
-      "category": "Objects as Parameters",
-      "detailedExplanation": "When objects are passed as parameters to methods in Java, they are passed by reference rather than by value. This means that the method receives a reference to the original object, not a copy of the object. As a result, any changes made to the object's state within the method will affect the original object.\n\nThis behavior is different from primitive types, which are passed by value (a copy is made). When you pass an object to a method, both the original reference and the method parameter reference point to the same object in memory. Therefore, modifying the object's instance variables through the parameter will change the original object.\n\nHowever, if you reassign the parameter to point to a different object within the method, this does not affect the original reference outside the method. Understanding this pass-by-reference behavior is crucial for writing methods that correctly manipulate objects and for avoiding unintended side effects.",
+      "question": "What is constructor overloading?",
+      "answer": "Having multiple constructors in the same class with different parameter lists",
+      "category": "Java OOP",
+      "detailedExplanation": "Constructor overloading is the practice of defining multiple constructors in the same class, each with a different number or type of parameters. This provides flexibility in how objects can be initialized.\n\nWhen an object is created, Java automatically determines which constructor to call based on the arguments provided. If no arguments are provided, the default or non-parameterised constructor is called. If arguments match a parameterised constructor, that specific constructor is invoked.\n\nThis feature allows objects to be initialized in different ways depending on what information is available at the time of creation, making the class more versatile and user-friendly.",
       "keyPoints": [
-        "Objects passed by reference, not by value",
-        "Methods can modify original object's state",
-        "Changes to object properties are permanent",
-        "Reassigning parameter doesn't affect original reference"
+        "Multiple constructors in same class",
+        "Different parameter lists",
+        "Automatic selection based on arguments",
+        "Provides initialization flexibility"
       ],
       "examples": [
-        "modifyStudent(Student s) can change s's name",
-        "updateAccount(BankAccount acc) can change balance",
-        "changeRectangle(Rectangle r) can modify dimensions"
+        "Student() { ... } // default",
+        "Student(String name) { ... } // name only",
+        "Student(String name, int age) { ... } // name and age"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What are nested member methods?",
+      "answer": "When one member method calls another member method within the same class",
+      "category": "Java Methods",
+      "detailedExplanation": "Nested member methods refer to the practice of calling one member method from within another member method of the same class. This promotes code reusability and follows the DRY (Don't Repeat Yourself) principle.\n\nInstead of writing the same logic multiple times in different methods, you can write it once in a dedicated method and call it from other methods that need that functionality. This makes the code more maintainable and reduces redundancy.\n\nThe called method can be either static or non-static, but if a static method calls a non-static method, it must be through an object reference.",
+      "keyPoints": [
+        "Method calling another method in same class",
+        "Promotes code reusability",
+        "Reduces code duplication",
+        "Follows DRY principle"
+      ],
+      "examples": [
+        "void methodA() { methodB(); } // calling methodB from methodA",
+        "void calculate() { validate(); process(); } // multiple nested calls"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between constructor and member method?",
+      "answer": "Constructor initializes objects (same name as class, no return type) while methods perform operations (different names, have return types)",
+      "category": "Java Comparison",
+      "detailedExplanation": "Constructors and member methods serve different purposes in a class:\n\n**Constructors**:\n- Same name as class name\n- No return type (not even void)\n- Automatically called when object is created\n- Used only for initializing instance variables\n- Always public\n- Automatically overloaded if multiple exist\n\n**Member Methods**:\n- Different name from class name\n- Must have return type (void or data type)\n- Explicitly called through objects\n- Perform various operations on data\n- Can be public, private, or protected\n- Need explicit overloading\n\nConstructors set up the object's initial state, while methods define what the object can do.",
+      "keyPoints": [
+        "Constructor: same name as class, no return type",
+        "Method: different name, has return type",
+        "Constructor: automatic call on creation",
+        "Method: explicit call through object"
+      ],
+      "examples": [
+        "Constructor: Student() { ... }",
+        "Method: void study() { ... } or int getAge() { ... }"
       ]
     }
   ],
   "mcqs": [
     {
       "id": 1,
-      "question": "Which type of variable is shared by all objects of a class?",
-      "options": ["Instance variable", "Local variable", "Static variable", "Parameter variable"],
-      "correctAnswer": "Static variable",
-      "category": "Variables in Classes",
-      "explanation": "Static variables (class variables) are shared by all objects of the class. There is only one copy of a static variable, and all objects access the same memory location."
+      "question": "Which of the following is true about instance variables?",
+      "options": [
+        "They are shared by all objects of the class",
+        "Each object gets its own separate copy",
+        "They are declared inside methods",
+        "They use the 'static' keyword"
+      ],
+      "correctAnswer": "Each object gets its own separate copy",
+      "category": "Java Variables"
     },
     {
       "id": 2,
-      "question": "What is the default value of an integer instance variable if not initialized?",
-      "options": ["0", "null", "1", "undefined"],
-      "correctAnswer": "0",
-      "category": "Variables in Classes",
-      "explanation": "Instance variables of numeric types (int, double, etc.) are automatically initialized to 0 (or 0.0 for floating-point types) if no explicit initialization is provided."
+      "question": "What is the purpose of a constructor?",
+      "options": [
+        "To perform mathematical calculations",
+        "To initialize instance variables",
+        "To display output to console",
+        "To handle user input"
+      ],
+      "correctAnswer": "To initialize instance variables",
+      "category": "Java Constructors"
     },
     {
       "id": 3,
-      "question": "Which access modifier allows access only within the same class?",
-      "options": ["public", "private", "protected", "default"],
+      "question": "Which access specifier provides the most restricted access?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "default"
+      ],
       "correctAnswer": "private",
-      "category": "Access Modifiers",
-      "explanation": "The private access modifier restricts access to within the same class only. Private members cannot be accessed from outside the class, including from subclasses."
+      "category": "Java Access Control"
     },
     {
       "id": 4,
-      "question": "What is the purpose of the 'this' keyword in Java?",
-      "options": ["To create a new object", "To refer to the current object", "To call static methods", "To import classes"],
-      "correctAnswer": "To refer to the current object",
-      "category": "this keyword",
-      "explanation": "The 'this' keyword refers to the current object instance. It is commonly used to distinguish between instance variables and method parameters with the same name."
+      "question": "What does the 'this' keyword refer to?",
+      "options": [
+        "The parent class",
+        "The current object",
+        "The static context",
+        "The method parameters"
+      ],
+      "correctAnswer": "The current object",
+      "category": "Java Keywords"
     },
     {
       "id": 5,
-      "question": "Which of the following is true about constructors?",
-      "options": ["They have a return type", "They are called using the object name", "They have the same name as the class", "They are used to destroy objects"],
-      "correctAnswer": "They have the same name as the class",
-      "category": "Constructors",
-      "explanation": "Constructors must have exactly the same name as the class they belong to. They don't have a return type and are called automatically when objects are created using 'new'."
+      "question": "Which type of variable is shared by all objects of a class?",
+      "options": [
+        "Instance variable",
+        "Local variable",
+        "Class variable (static)",
+        "Parameter variable"
+      ],
+      "correctAnswer": "Class variable (static)",
+      "category": "Java Variables"
     },
     {
       "id": 6,
-      "question": "What happens when an object is passed as a parameter to a method?",
-      "options": ["A copy of the object is created", "The original object is modified if changed in method", "The object becomes static", "The object is destroyed after method call"],
-      "correctAnswer": "The original object is modified if changed in method",
-      "category": "Objects as Parameters",
-      "explanation": "Objects are passed by reference in Java. When an object is passed to a method, the method receives a reference to the original object, so any changes made to the object's state will affect the original object."
-    },
-    {
-      "id": 7,
-      "question": "Which type of constructor is automatically provided by Java if no constructor is defined?",
-      "options": ["Parameterized constructor", "Copy constructor", "Default constructor", "Static constructor"],
-      "correctAnswer": "Default constructor",
-      "category": "Types of Constructors",
-      "explanation": "If no constructor is explicitly defined in a class, Java automatically provides a default constructor (no-argument constructor) that initializes instance variables to their default values."
-    },
-    {
-      "id": 8,
-      "question": "What can static methods directly access?",
-      "options": ["Instance variables", "Static variables", "Local variables of other methods", "All variables"],
-      "correctAnswer": "Static variables",
-      "category": "Static Members",
-      "explanation": "Static methods can directly access only static variables and other static methods. They cannot directly access instance variables because instance variables belong to specific objects, not the class."
-    },
-    {
-      "id": 9,
-      "question": "Where are local variables stored and what is their lifetime?",
-      "options": ["Heap memory, program lifetime", "Stack memory, method execution time", "Static memory, class lifetime", "Register memory, variable scope"],
-      "correctAnswer": "Stack memory, method execution time",
-      "category": "Variables in Classes",
-      "explanation": "Local variables are stored in stack memory and exist only during the execution of the method in which they are declared. They are destroyed when the method completes execution."
-    },
-    {
-      "id": 10,
-      "question": "Which access modifier allows access within the same package and by subclasses in other packages?",
-      "options": ["public", "private", "protected", "default"],
-      "correctAnswer": "protected",
-      "category": "Access Modifiers",
-      "explanation": "The protected access modifier allows access within the same package and by subclasses, even if they are in different packages. It provides more accessibility than default but less than public."
+      "question": "What is constructor overloading?",
+      "options": [
+        "Making constructors private",
+        "Having multiple constructors with different parameters",
+        "Calling constructors from methods",
+        "Using constructors in inheritance"
+      ],
+      "correctAnswer": "Having multiple constructors with different parameters",
+      "category": "Java Constructors"
     }
   ]
 }
