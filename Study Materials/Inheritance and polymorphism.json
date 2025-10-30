@@ -1,267 +1,334 @@
 {
-  "deckName": "ISC Class 12 Computer Science - Inheritance",
+  "deckName": "Java Inheritance",
   "flashcards": [
     {
       "id": 1,
-      "question": "What is inheritance in object-oriented programming?",
-      "answer": "Inheritance is a mechanism where a new class (derived class) acquires properties and methods from an existing class (base class).",
-      "category": "Introduction to Inheritance",
-      "detailedExplanation": "Inheritance is a fundamental concept in object-oriented programming that allows creating new classes based on existing classes. The derived class (subclass) inherits attributes and methods from the base class (superclass), promoting code reusability. This establishes an 'is-a' relationship between classes, where the derived class is a specialized version of the base class. For example, if we have a base class 'Vehicle', we can create derived classes like 'Car', 'Bike', and 'Truck' that inherit common properties from Vehicle while adding their own specific features.",
+      "question": "What is Inheritance in Java?",
+      "answer": "A mechanism where a new class (subclass) derives properties and behaviors from an existing class (superclass).",
+      "category": "Inheritance Fundamentals",
+      "detailedExplanation": "Inheritance is one of the four fundamental OOP concepts in Java. It allows a new class (called subclass, child class, or derived class) to inherit the fields and methods of an existing class (called superclass, parent class, or base class). This promotes code reusability and establishes a natural hierarchy between classes.\n\nThe subclass can add its own fields and methods, and can also override inherited methods to provide specific implementations. Inheritance represents an 'is-a' relationship between classes.",
       "keyPoints": [
-        "Allows code reusability",
-        "Creates 'is-a' relationship between classes",
-        "Derived class inherits from base class",
-        "Promotes hierarchical classification"
+        "Promotes code reusability",
+        "Establishes 'is-a' relationship",
+        "Subclass inherits from superclass",
+        "Supports method overriding"
       ],
       "examples": [
-        "Vehicle → Car, Bike, Truck",
-        "Shape → Circle, Rectangle, Triangle",
-        "Person → Student, Teacher, Employee"
+        "class Car extends Vehicle { }",
+        "class Student extends Person { }"
       ]
     },
     {
       "id": 2,
-      "question": "What are the main advantages of using inheritance?",
-      "answer": "Code reusability, method overriding, and creating class hierarchies.",
-      "category": "Need of Inheritance",
-      "detailedExplanation": "Inheritance provides several important benefits in programming. The primary advantage is code reusability - we can write common functionality in a base class and reuse it in multiple derived classes without rewriting the same code. This reduces code duplication and makes maintenance easier. Inheritance also enables method overriding, where derived classes can provide their own implementation of inherited methods. Additionally, it helps in creating natural class hierarchies that model real-world relationships. For ISC syllabus, understanding these advantages is crucial for designing efficient object-oriented programs.",
+      "question": "What are the main types of inheritance in Java?",
+      "answer": "Single, Multilevel, Hierarchical, Multiple (through interfaces), and Hybrid inheritance.",
+      "category": "Inheritance Types",
+      "detailedExplanation": "Java supports several types of inheritance to model different relationship patterns:\n\n**Single Inheritance**: A class inherits from only one superclass.\n**Multilevel Inheritance**: A class inherits from a subclass, creating a chain (A→B→C).\n**Hierarchical Inheritance**: Multiple classes inherit from a single superclass.\n**Multiple Inheritance**: A class inherits from multiple classes (achieved through interfaces in Java).\n**Hybrid Inheritance**: A combination of two or more inheritance types.\n\nJava doesn't support multiple inheritance with classes to avoid complexity and the 'diamond problem', but it's achieved through interfaces.",
       "keyPoints": [
-        "Eliminates code duplication",
-        "Easy maintenance and updates",
-        "Supports method overriding",
-        "Creates logical class relationships"
+        "Single: One superclass per subclass",
+        "Multilevel: Inheritance chain",
+        "Hierarchical: Multiple subclasses from one superclass",
+        "Multiple: Through interfaces only"
       ],
       "examples": [
-        "Common attributes in base class Person reused in Student and Teacher",
-        "calculateArea() method overridden in Circle and Rectangle",
-        "Vehicle hierarchy with common fuel-related methods"
+        "Single: class B extends A",
+        "Multilevel: class C extends B, class B extends A",
+        "Hierarchical: class B extends A, class C extends A"
       ]
     },
     {
       "id": 3,
-      "question": "What are the different types of inheritance?",
-      "answer": "Single, multilevel, hierarchical, and multiple inheritance.",
-      "category": "Types of Inheritance",
-      "detailedExplanation": "Inheritance can be implemented in different ways depending on the relationship between classes. Single inheritance is when a class inherits from only one base class. Multilevel inheritance involves a chain of inheritance where class A is base for B, and B is base for C. Hierarchical inheritance occurs when multiple classes inherit from a single base class. Multiple inheritance, where a class inherits from more than one base class, is not supported in Java through classes but can be achieved using interfaces. For ISC Class 12, focus on understanding single and multilevel inheritance as they are most commonly used.",
+      "question": "What is the 'super' keyword and how is it used?",
+      "answer": "A reference variable used to refer to immediate parent class object, methods, and constructors.",
+      "category": "Inheritance Keywords",
+      "detailedExplanation": "The 'super' keyword in Java has three main uses:\n\n1. **Referring to Parent Class Instance Variable**: Used when child and parent class have same-named variables.\n2. **Invoking Parent Class Method**: Used to call overridden methods of the parent class.\n3. **Invoking Parent Class Constructor**: Used to call parent class constructor from child class constructor.\n\nThe 'super' keyword helps eliminate naming conflicts and ensures proper initialization of parent class members before child class members.",
       "keyPoints": [
-        "Single: One base, one derived class",
-        "Multilevel: Chain of inheritance (A→B→C)",
-        "Hierarchical: One base, multiple derived classes",
-        "Multiple: Not supported in Java with classes"
+        "Refers to immediate parent class",
+        "Access parent class variables and methods",
+        "Call parent class constructors",
+        "Must be first statement in constructor"
       ],
       "examples": [
-        "Single: Car inherits from Vehicle",
-        "Multilevel: Animal → Mammal → Human",
-        "Hierarchical: Shape → Circle, Rectangle, Triangle"
+        "super.variableName - access parent variable",
+        "super.methodName() - call parent method",
+        "super() - call parent constructor"
       ]
     },
     {
       "id": 4,
-      "question": "What are visibility modes in inheritance?",
-      "answer": "Public, protected, and private inheritance modes that control member accessibility.",
-      "category": "Visibility Modes",
-      "detailedExplanation": "Visibility modes determine how base class members are inherited in the derived class. In public inheritance, public members remain public, protected remain protected. In protected inheritance, both public and protected members become protected in derived class. In private inheritance, all inherited members become private. Private members of base class are never directly accessible in derived class regardless of visibility mode. In Java, we mainly use public inheritance, but understanding all modes is important for comprehensive knowledge.",
+      "question": "What are the different access modifiers and their visibility in inheritance?",
+      "answer": "public, protected, default (package-private), and private - with varying inheritance visibility.",
+      "category": "Access Control",
+      "detailedExplanation": "Access modifiers control the visibility of class members in inheritance:\n\n**public**: Accessible everywhere, including subclasses in any package.\n**protected**: Accessible within same package and to subclasses (even in different packages).\n**default (no modifier)**: Accessible only within the same package.\n**private**: Not accessible to subclasses, only within the same class.\n\nIn inheritance, subclasses can access public and protected members of the parent class, but cannot access private members directly.",
       "keyPoints": [
-        "Public inheritance: Maintains original access levels",
-        "Protected inheritance: Public becomes protected",
-        "Private inheritance: All become private",
-        "Private base members are never directly accessible"
+        "public: Global access",
+        "protected: Package + subclasses access",
+        "default: Package access only",
+        "private: Class access only"
       ],
       "examples": [
-        "Public: Vehicle → Car (public methods remain public)",
-        "Protected: Base → Middle class for further derivation",
-        "Private: Implementation hiding"
+        "public methods - inherited by all subclasses",
+        "protected variables - accessible to subclasses",
+        "private members - not accessible to subclasses"
       ]
     },
     {
       "id": 5,
-      "question": "How can we access base class members from derived class?",
-      "answer": "Using super keyword in Java or scope resolution in C++.",
-      "category": "Accessing Base Class Members",
-      "detailedExplanation": "To access base class members from derived class, we use specific keywords. In Java, the 'super' keyword is used to refer to immediate parent class. We can use super to call parent class constructor (super()), access parent class methods (super.methodName()), or refer to parent class variables. This is particularly useful when we have method overriding and want to call the parent class version of the method. Understanding how to properly use super is essential for working with inheritance in Java programs.",
+      "question": "What is Method Overriding in inheritance?",
+      "answer": "When a subclass provides a specific implementation of a method already defined in its superclass.",
+      "category": "Polymorphism",
+      "detailedExplanation": "Method overriding occurs when a subclass has a method with the same name, return type, and parameters as a method in its superclass. The subclass method 'overrides' the parent class method to provide its own specific implementation.\n\n**Rules for Method Overriding:**\n- Method name and parameters must be exactly the same\n- Return type should be the same or covariant (subtype)\n- Access modifier cannot be more restrictive\n- Cannot override static, final, or private methods\n- Use @Override annotation for better code clarity",
       "keyPoints": [
-        "Use super() to call base class constructor",
-        "Use super.method() to call overridden methods",
-        "super must be first statement in constructor",
-        "Used to resolve naming conflicts"
+        "Same method signature as parent",
+        "Provides specific implementation",
+        "Runtime polymorphism",
+        "Cannot override static/final methods"
       ],
       "examples": [
-        "super() in derived class constructor",
-        "super.display() to call parent class method",
-        "Using super in method overriding scenarios"
+        "Parent: void display() { ... }",
+        "Child: @Override void display() { ... }"
       ]
     },
     {
       "id": 6,
-      "question": "What happens to private members of base class in inheritance?",
-      "answer": "Private members are inherited but not directly accessible in derived class.",
-      "category": "Private Members",
-      "detailedExplanation": "Private members of the base class are inherited by the derived class in terms of memory allocation, but they cannot be accessed directly by the derived class. The derived class can only access these private members through public or protected methods provided by the base class. This maintains encapsulation and data hiding principles. For example, if a base class has private variables, the derived class must use public getter and setter methods to work with those variables. This is an important concept for ISC exams as it tests understanding of access control in inheritance.",
+      "question": "What is the difference between method overloading and method overriding?",
+      "answer": "Overloading: Same method name, different parameters. Overriding: Same method signature in subclass.",
+      "category": "Polymorphism Comparison",
+      "detailedExplanation": "**Method Overloading (Compile-time Polymorphism):**\n- Same method name, different parameters\n- Can have different return types\n- Within same class\n- Compile-time decision\n\n**Method Overriding (Runtime Polymorphism):**\n- Same method name and parameters\n- Same or covariant return type\n- Between superclass and subclass\n- Runtime decision\n- Cannot override static/final/private methods\n\nOverloading increases readability, while overriding enables polymorphism.",
       "keyPoints": [
-        "Private members are inherited",
-        "Not directly accessible in derived class",
-        "Accessible only through public/protected methods",
-        "Maintains encapsulation principle"
+        "Overloading: Same class, different parameters",
+        "Overriding: Different classes, same signature",
+        "Overloading: Compile-time decision",
+        "Overriding: Runtime decision"
       ],
       "examples": [
-        "Using getName() method to access private name variable",
-        "Setter methods to modify private data",
-        "Private variables exist in derived class object"
+        "Overloading: void show(int a) and void show(String s)",
+        "Overriding: Parent: show(), Child: show()"
       ]
     },
     {
       "id": 7,
-      "question": "What is the purpose of protected access specifier?",
-      "answer": "To allow access to derived classes while hiding from external code.",
-      "category": "Protected Members",
-      "detailedExplanation": "The protected access specifier provides a balance between public and private access. Protected members are accessible within the same class, by derived classes, and within the same package, but not by unrelated external classes. This is useful when we want to share implementation details with derived classes while keeping them hidden from the rest of the program. For ISC syllabus, understanding when to use protected instead of private or public is important for designing good class hierarchies that maintain proper encapsulation.",
+      "question": "What are abstract classes and methods in inheritance?",
+      "answer": "Abstract classes cannot be instantiated and may contain abstract methods without implementation.",
+      "category": "Abstraction",
+      "detailedExplanation": "**Abstract Class:**\n- Declared with 'abstract' keyword\n- Cannot be instantiated\n- May contain abstract and concrete methods\n- Used as base classes for inheritance\n\n**Abstract Method:**\n- Declared without implementation (no body)\n- Must be overridden by concrete subclasses\n- Forces subclasses to provide specific implementations\n\nAbstract classes are used when you want to define a common interface for subclasses while providing some common functionality.",
       "keyPoints": [
-        "Accessible by derived classes",
-        "Not accessible by external classes",
-        "Useful for inheritance hierarchies",
-        "Balances accessibility and encapsulation"
+        "Abstract classes cannot be instantiated",
+        "May contain abstract and concrete methods",
+        "Abstract methods have no implementation",
+        "Subclasses must implement abstract methods"
       ],
       "examples": [
-        "Protected variables for derived class access",
-        "Protected methods for derived class overriding",
-        "Helper methods shared in inheritance tree"
+        "abstract class Shape { abstract void draw(); }",
+        "class Circle extends Shape { void draw() { ... } }"
       ]
     },
     {
       "id": 8,
-      "question": "What is polymorphism in Java?",
-      "answer": "The ability of an object to take many forms, achieved through method overloading and overriding.",
-      "category": "Polymorphism",
-      "detailedExplanation": "Polymorphism means 'many forms' and is a core concept in object-oriented programming. In Java, polymorphism allows us to perform a single action in different ways. There are two types: compile-time polymorphism (method overloading) and runtime polymorphism (method overriding). Method overloading occurs when multiple methods have same name but different parameters. Method overriding occurs when a derived class provides a specific implementation of a method already defined in its base class. For ISC Class 12, focus on method overriding as it's closely related to inheritance.",
+      "question": "What are final classes and methods in inheritance?",
+      "answer": "Final classes cannot be extended, final methods cannot be overridden.",
+      "category": "Inheritance Restrictions",
+      "detailedExplanation": "The 'final' keyword imposes restrictions on inheritance:\n\n**Final Class:**\n- Cannot be extended (no subclasses)\n- Used for security or design reasons\n- All methods in final class are implicitly final\n\n**Final Method:**\n- Cannot be overridden by subclasses\n- Used when method implementation should not change\n- Improves performance (static binding)\n\n**Final Variable:**\n- Constant value that cannot be changed\n- Must be initialized when declared or in constructor",
       "keyPoints": [
-        "Compile-time: Method overloading",
-        "Runtime: Method overriding",
-        "Same method name, different behaviors",
-        "Essential for flexible code design"
+        "Final class: Cannot be subclassed",
+        "Final method: Cannot be overridden",
+        "Final variable: Constant value",
+        "Improves security and performance"
       ],
       "examples": [
-        "Shape class with calculateArea() overridden in Circle, Rectangle",
-        "Animal class with makeSound() giving different sounds",
-        "BankAccount with different calculateInterest() implementations"
+        "final class Math { ... } - cannot be extended",
+        "final void display() { ... } - cannot be overridden"
       ]
     },
     {
       "id": 9,
-      "question": "What is method overriding and how is it done?",
-      "answer": "Redefining a base class method in derived class with same signature.",
-      "category": "Method Overriding",
-      "detailedExplanation": "Method overriding occurs when a derived class provides a specific implementation for a method that is already defined in its base class. For successful overriding, the method must have the same name, same return type, and same parameters as the method in the parent class. The access level cannot be more restrictive than the parent method. In Java, we use the @Override annotation to indicate we are overriding a method, which helps in catching errors at compile time. Overriding is fundamental for achieving runtime polymorphism in inheritance hierarchies.",
+      "question": "What is constructor chaining in inheritance?",
+      "answer": "The process of calling constructors sequentially from child to parent classes during object creation.",
+      "category": "Constructors in Inheritance",
+      "detailedExplanation": "When an object of a subclass is created, constructors are called in a specific sequence:\n\n1. **Implicit super() call**: If no explicit super() call, Java automatically calls parent's default constructor\n2. **Parent class constructor** executes first\n3. **Child class constructor** executes after parent constructor completes\n\n**Key Points:**\n- super() must be first statement in constructor\n- If parent doesn't have default constructor, child must explicitly call super(parameters)\n- Constructor chaining ensures proper initialization hierarchy",
       "keyPoints": [
-        "Same method signature required",
-        "Cannot reduce accessibility",
-        "Use @Override annotation",
-        "Enables runtime polymorphism"
+        "Parent constructor called first",
+        "super() must be first statement",
+        "Automatic call to parent default constructor",
+        "Ensures proper initialization order"
       ],
       "examples": [
-        "Vehicle → Car (both have start() method)",
-        "BankAccount → SavingsAccount (both have calculateInterest())",
-        "Shape → Circle (both have calculateArea())"
+        "Child() { super(); ... } - explicit parent call",
+        "Child(int x) { super(x); ... } - parameterized parent call"
       ]
     },
     {
       "id": 10,
-      "question": "How do we call superclass constructor from derived class?",
-      "answer": "Using super() as the first statement in derived class constructor.",
-      "category": "Superclass Constructor",
-      "detailedExplanation": "When creating an object of a derived class, the constructor of the base class must be called first to ensure proper initialization. In Java, this is done using the super() keyword in the derived class constructor. The super() call must be the first statement in the constructor. If we don't explicitly call super(), the compiler automatically inserts a call to the no-argument constructor of the base class. If the base class doesn't have a no-argument constructor, we must explicitly call the appropriate constructor using super with parameters.",
+      "question": "What is the 'instanceof' operator in inheritance?",
+      "answer": "A boolean operator that tests if an object is an instance of a specific class or interface.",
+      "category": "Type Checking",
+      "detailedExplanation": "The instanceof operator checks whether an object is an instance of a particular class, subclass, or interface. It returns true if the object is an instance of the specified type, false otherwise.\n\n**Usage:**\n- Check object type before casting\n- Avoid ClassCastException\n- Useful in polymorphic scenarios\n- Works with class hierarchy and interfaces\n\nThe operator follows inheritance hierarchy - if object is instance of subclass, it's also instance of superclass.",
       "keyPoints": [
-        "super() must be first statement",
-        "Automatic call to no-arg constructor if not specified",
-        "Used to initialize base class part of object",
-        "Parameters can be passed to base constructor"
+        "Checks object type",
+        "Returns boolean result",
+        "Works with classes and interfaces",
+        "Prevents ClassCastException"
       ],
       "examples": [
-        "super() calls no-argument base constructor",
-        "super(name, age) calls parameterized constructor",
-        "Implicit super() when not specified"
+        "if (obj instanceof Car) { Car c = (Car)obj; }",
+        "obj instanceof Vehicle - true for Car objects"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "What is the Object class in Java inheritance?",
+      "answer": "The root class of all Java classes - every class implicitly extends Object class.",
+      "category": "Java Foundation",
+      "detailedExplanation": "The Object class is the superclass of all classes in Java. If a class doesn't explicitly extend another class, it implicitly extends the Object class.\n\n**Important Methods in Object Class:**\n- toString(): Returns string representation of object\n- equals(): Compares objects for equality\n- hashCode(): Returns hash code value\n- getClass(): Returns runtime class of object\n- clone(): Creates and returns copy of object\n- finalize(): Called by garbage collector before destruction\n\nUnderstanding these methods is crucial as they're commonly overridden in custom classes.",
+      "keyPoints": [
+        "Root class of all Java classes",
+        "Implicitly extended by all classes",
+        "Contains fundamental methods",
+        "Commonly overridden methods"
+      ],
+      "examples": [
+        "class Car { } // implicitly extends Object",
+        "@Override public String toString() { ... }"
+      ]
+    },
+    {
+      "id": 12,
+      "question": "What are the advantages and disadvantages of inheritance?",
+      "answer": "Advantages: Code reuse, extensibility. Disadvantages: Tight coupling, complex hierarchy.",
+      "category": "Inheritance Analysis",
+      "detailedExplanation": "**Advantages:**\n- **Code Reusability**: Inherit existing functionality\n- **Extensibility**: Easily add new features\n- **Polymorphism**: Runtime method binding\n- **Organization**: Natural class hierarchy\n\n**Disadvantages:**\n- **Tight Coupling**: Changes in parent affect children\n- **Complex Hierarchy**: Deep inheritance hard to maintain\n- **Fragile Base Class**: Parent changes break children\n- **Overuse**: 'Is-a' relationship misused\n\n**Best Practices:**\n- Use inheritance only for true 'is-a' relationships\n- Prefer composition over inheritance when possible\n- Keep inheritance hierarchy shallow",
+      "keyPoints": [
+        "Advantages: Reusability, extensibility, polymorphism",
+        "Disadvantages: Coupling, complexity, fragility",
+        "Use for true 'is-a' relationships",
+        "Prefer composition when appropriate"
+      ],
+      "examples": [
+        "Good: Car extends Vehicle (true is-a)",
+        "Bad: DatabaseManager extends StringUtils (not is-a)"
       ]
     }
   ],
   "mcqs": [
     {
       "id": 1,
-      "question": "Which type of inheritance is not supported in Java through classes?",
-      "options": ["Single inheritance", "Multilevel inheritance", "Hierarchical inheritance", "Multiple inheritance"],
-      "correctAnswer": "Multiple inheritance",
-      "category": "Types of Inheritance",
-      "explanation": "Java does not support multiple inheritance with classes to avoid complexity and ambiguity. However, it can be achieved using interfaces."
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "implements",
+        "inherits",
+        "extends",
+        "super"
+      ],
+      "correctAnswer": "extends",
+      "category": "Inheritance Fundamentals"
     },
     {
       "id": 2,
-      "question": "What is the output of: class A { int x=10; } class B extends A { int x=20; void show() { System.out.println(super.x); }}",
-      "options": ["10", "20", "Compilation error", "Runtime error"],
-      "correctAnswer": "10",
-      "category": "Accessing Base Class Members",
-      "explanation": "super.x refers to the x variable of the parent class A, which has value 10."
+      "question": "Which type of inheritance is NOT supported by Java through classes?",
+      "options": [
+        "Single inheritance",
+        "Multiple inheritance",
+        "Multilevel inheritance",
+        "Hierarchical inheritance"
+      ],
+      "correctAnswer": "Multiple inheritance",
+      "category": "Inheritance Types"
     },
     {
       "id": 3,
-      "question": "Which keyword is used to call base class constructor from derived class?",
-      "options": ["this", "super", "base", "parent"],
-      "correctAnswer": "super",
-      "category": "Superclass Constructor",
-      "explanation": "The super keyword is used to call base class constructor from derived class constructor."
+      "question": "What is the output of: class A { } class B extends A { } System.out.println(B instanceof A);",
+      "options": [
+        "true",
+        "false",
+        "Compilation error",
+        "Runtime error"
+      ],
+      "correctAnswer": "Compilation error",
+      "category": "Type Checking"
     },
     {
       "id": 4,
-      "question": "What happens to private members of base class in derived class?",
-      "options": ["Not inherited", "Become public", "Become protected", "Inherited but not accessible"],
-      "correctAnswer": "Inherited but not accessible",
-      "category": "Private Members",
-      "explanation": "Private members are inherited in terms of memory allocation but cannot be accessed directly in derived class."
+      "question": "Which access modifier allows visibility to subclasses in different packages?",
+      "options": [
+        "private",
+        "default",
+        "protected",
+        "public"
+      ],
+      "correctAnswer": "protected",
+      "category": "Access Control"
     },
     {
       "id": 5,
-      "question": "Which access specifier allows access to derived classes but not to external classes?",
-      "options": ["public", "private", "protected", "default"],
-      "correctAnswer": "protected",
-      "category": "Protected Members",
-      "explanation": "Protected members are accessible within the same class, derived classes, and same package, but not by external classes."
+      "question": "What happens if a subclass doesn't call super() explicitly in its constructor?",
+      "options": [
+        "Compilation error",
+        "Runtime error",
+        "Java automatically calls super()",
+        "Parent constructor is not called"
+      ],
+      "correctAnswer": "Java automatically calls super()",
+      "category": "Constructors in Inheritance"
     },
     {
       "id": 6,
-      "question": "What is the main advantage of inheritance?",
-      "options": ["Faster execution", "Code reusability", "Smaller file size", "Better memory management"],
-      "correctAnswer": "Code reusability",
-      "category": "Need of Inheritance",
-      "explanation": "The primary advantage of inheritance is code reusability - we can reuse existing code from base classes."
+      "question": "Which method in Object class is used to get string representation of an object?",
+      "options": [
+        "toString()",
+        "getString()",
+        "stringValue()",
+        "convertString()"
+      ],
+      "correctAnswer": "toString()",
+      "category": "Java Foundation"
     },
     {
       "id": 7,
-      "question": "In method overriding, the method in derived class must have:",
-      "options": ["Same name only", "Same name and return type", "Same name and parameters", "Same name, return type and parameters"],
-      "correctAnswer": "Same name, return type and parameters",
-      "category": "Method Overriding",
-      "explanation": "For method overriding, the method signature (name, return type, and parameters) must be exactly the same."
+      "question": "What is the main purpose of method overriding?",
+      "options": [
+        "To improve performance",
+        "To provide specific implementation in subclass",
+        "To hide parent class methods",
+        "To create multiple methods with same name"
+      ],
+      "correctAnswer": "To provide specific implementation in subclass",
+      "category": "Polymorphism"
     },
     {
       "id": 8,
-      "question": "Which concept allows an object to take many forms?",
-      "options": ["Inheritance", "Encapsulation", "Polymorphism", "Abstraction"],
-      "correctAnswer": "Polymorphism",
-      "category": "Polymorphism",
-      "explanation": "Polymorphism allows objects of different classes to be treated as objects of a common super class."
+      "question": "Which keyword prevents a class from being inherited?",
+      "options": [
+        "static",
+        "final",
+        "private",
+        "abstract"
+      ],
+      "correctAnswer": "final",
+      "category": "Inheritance Restrictions"
     },
     {
       "id": 9,
-      "question": "Where must super() call be placed in derived class constructor?",
-      "options": ["Anywhere", "Last statement", "First statement", "Not required"],
-      "correctAnswer": "First statement",
-      "category": "Superclass Constructor",
-      "explanation": "The super() call must be the first statement in the derived class constructor."
+      "question": "In multilevel inheritance A→B→C, which constructor is called first when creating C object?",
+      "options": [
+        "C constructor",
+        "B constructor",
+        "A constructor",
+        "All simultaneously"
+      ],
+      "correctAnswer": "A constructor",
+      "category": "Constructors in Inheritance"
     },
     {
       "id": 10,
-      "question": "What is the relationship between base and derived class called?",
-      "options": ["Has-a", "Is-a", "Uses-a", "Contains-a"],
-      "correctAnswer": "Is-a",
-      "category": "Introduction to Inheritance",
-      "explanation": "Inheritance creates an 'is-a' relationship where derived class is a specialized version of base class."
+      "question": "What is the relationship between composition and inheritance?",
+      "options": [
+        "They are the same concept",
+        "Composition is 'has-a', inheritance is 'is-a'",
+        "Inheritance is 'has-a', composition is 'is-a'",
+        "They are mutually exclusive"
+      ],
+      "correctAnswer": "Composition is 'has-a', inheritance is 'is-a'",
+      "category": "Inheritance Analysis"
     }
   ]
 }
