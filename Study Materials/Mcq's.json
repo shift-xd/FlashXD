@@ -1,1 +1,771 @@
 
+{
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "Characteristics of real world objects are referred to as:",
+      "options": [
+        "Methods of software objects",
+        "Classes of software objects",
+        "Data of software objects",
+        "Constructors of software objects"
+      ],
+      "correctAnswer": "Data of software objects",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 2,
+      "question": "The outer wrapper of a class is defined with:",
+      "options": [
+        "A function with function name",
+        "A class with class name",
+        "A constructor with constructor name",
+        "None of the above"
+      ],
+      "correctAnswer": "A class with class name",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is not the member of a class?",
+      "options": [
+        "Data",
+        "Function",
+        "Constructor",
+        "Package"
+      ],
+      "correctAnswer": "Package",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 4,
+      "question": "What is meant by instantiation?",
+      "options": [
+        "Defining a class",
+        "Creating objects",
+        "Wrapping data and member methods",
+        "Creating nested member methods"
+      ],
+      "correctAnswer": "Creating objects",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 5,
+      "question": "A static data member is also called:",
+      "options": [
+        "Instance variable",
+        "Class variable",
+        "Local variable",
+        "Global variable"
+      ],
+      "correctAnswer": "Class variable",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 6,
+      "question": "Which keyword is used to resolve the conflict between local and instance variables?",
+      "options": [
+        "new",
+        "private",
+        "import",
+        "this"
+      ],
+      "correctAnswer": "this",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 7,
+      "question": "For which purpose, a constructor is used?",
+      "options": [
+        "To initialise the instance variables",
+        "To provide the instance variables",
+        "To organise the instance variables",
+        "To simplify the instance variables"
+      ],
+      "correctAnswer": "To initialise the instance variables",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 8,
+      "question": "Which of the following statements is false?",
+      "options": [
+        "A constructor has same name as class name.",
+        "A constructor returns initial value.",
+        "A constructor is called while creating an object.",
+        "A constructor is not used for arithmetical and logical operations."
+      ],
+      "correctAnswer": "A constructor returns initial value.",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 9,
+      "question": "A constructor is always:",
+      "options": [
+        "private",
+        "protected",
+        "secure",
+        "public"
+      ],
+      "correctAnswer": "",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 10,
+      "question": ".................. constructor initialises data members with default values.",
+      "options": [
+        "Parameterised",
+        "Non-parameterised"
+      ],
+      "correctAnswer": "Non-parameterised",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 11,
+      "question": "Assertion (A): The instance variables are also called the data members of a class and are globally available in a Java program. Reason (R): They are declared within the outer wrapper but outside the member methods. Based on the above discussion, choose an appropriate statement from the options given below:",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 12,
+      "question": "Assertion (A): The new operator is used to create an instance of the class. Reason (R): It allocates space in the dynamic memory for storage of an object at run time. Based on the above discussion, choose an appropriate statement from the options given below:",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 13,
+      "question": "An object is also called.............. of a class.",
+      "options": [
+        "substance",
+        "instance",
+        "resonance",
+        "None of these"
+      ],
+      "correctAnswer": "instance",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 14,
+      "question": "The data members declared within a class are also termed as:",
+      "options": [
+        "instance variables",
+        "local variables",
+        "global variables",
+        "temporary variables"
+      ],
+      "correctAnswer": "instance variables",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 15,
+      "question": "What type of data is accessible only within the scope of a class?",
+      "options": [
+        "public",
+        "protected",
+        "private",
+        "secure"
+      ],
+      "correctAnswer": "private",
+      "category": "Class and Constructors"
+    },
+    {
+      "id": 16,
+      "question": "Which of the following is not true for recursive method?",
+      "options": [
+        "It calls itself.",
+        "It is invoked in the body of the same method.",
+        "It does not return a value.",
+        "It uses only a single parameter."
+      ],
+      "correctAnswer": "It uses only a single parameter.",
+      "category": "Recursion"
+    },
+    {
+      "id": 17,
+      "question": "One of the advantages of recursive technique is:",
+      "options": [
+        "It uses only pass by value technique.",
+        "It is non-parameterised.",
+        "The code is clear and precise.",
+        "None of the above"
+      ],
+      "correctAnswer": "The code is clear and precise.",
+      "category": "Recursion"
+    },
+    {
+      "id": 18,
+      "question": "The recursive technique is different than iterative technique because:",
+      "options": [
+        "Recursive technique takes more time to execute than iterative technique.",
+        "Iterative construct is used for repeating the execution but recursive does not repeat the execution.",
+        "The logic creation is complex using iterative process than recursive process.",
+        "Recursive technique uses in-built method but not the iterative technique."
+      ],
+      "correctAnswer": "Recursive technique takes more time to execute than iterative technique.",
+      "category": "Recursion"
+    },
+    {
+      "id": 19,
+      "question": "A tail recursion uses recursive case:",
+      "options": [
+        "In the beginning of the recursive method.",
+        "At the end of the recursive method.",
+        "In between the statements of the recursive method.",
+        "As a formal parameter of the recursive method."
+      ],
+      "correctAnswer": "At the end of the recursive method.",
+      "category": "Recursion"
+    },
+    {
+      "id": 20,
+      "question": "Binary recursion is:",
+      "options": [
+        "An indirect recursion",
+        "A mutual recursion",
+        "Called from two points of the same method",
+        "A private method"
+      ],
+      "correctAnswer": "Called from two points of the same method",
+      "category": "Recursion"
+    },
+    {
+      "id": 21,
+      "question": "Assertion (A): Every recursive function uses a condition to terminate, known as ‘Base Case’. Reason (R): The control terminates the function, if the condition for base case is true, otherwise it keeps calling the function. Based on the above discussion, choose an appropriate statement from the options given below:",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "",
+      "category": "Recursion"
+    },
+    {
+      "id": 22,
+      "question": "What type of data is not accessed in derived class?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "None of these"
+      ],
+      "correctAnswer": "private",
+      "category": "Inheritance"
+    },
+    {
+      "id": 23,
+      "question": "A private member method is only accessed:",
+      "options": [
+        "In the scope of the same class in which it is defined.",
+        "Anywhere outside the class in which it is defined.",
+        "In the derived class.",
+        "None of the above"
+      ],
+      "correctAnswer": "In the scope of the same class in which it is defined.",
+      "category": "Inheritance"
+    },
+    {
+      "id": 24,
+      "question": "................ is a common field for all the objects of a class.",
+      "options": [
+        "Local variable",
+        "Global variable",
+        "Class variable",
+        "Instance variable"
+      ],
+      "correctAnswer": "Class variable",
+      "category": "Inheritance"
+    },
+    {
+      "id": 25,
+      "question": "Which of the following data is a separate field for all the objects of a class?",
+      "options": [
+        "Local variable",
+        "Class variable",
+        "Instance variable",
+        "Primitive variable"
+      ],
+      "correctAnswer": "Instance variable",
+      "category": "Inheritance"
+    },
+    {
+      "id": 26,
+      "question": "Which of the following is a combination of more than one inheritance systems?",
+      "options": [
+        "Hybrid inheritance",
+        "Multiple inheritance",
+        "Single inheritance",
+        "Hierarchical inheritance"
+      ],
+      "correctAnswer": "Hybrid inheritance",
+      "category": "Inheritance"
+    },
+    {
+      "id": 27,
+      "question": "What is another name of multilevel inheritance?",
+      "options": [
+        "Single inheritance",
+        "Nested inheritance",
+        "Multiple inheritance",
+        "Derived inheritance"
+      ],
+      "correctAnswer": "Nested inheritance",
+      "category": "Inheritance"
+    },
+    {
+      "id": 28,
+      "question": "When inheritance takes place:",
+      "options": [
+        "Derived class acquires features from base class.",
+        "A base class acquires features from derived class.",
+        "A superclass acquires features from a target.",
+        "Base and derived classes mutually share data between them."
+      ],
+      "correctAnswer": "Derived class acquires features from base class.",
+      "category": "Inheritance"
+    },
+    {
+      "id": 29,
+      "question": "What does getter do during inheritance?",
+      "options": [
+        "Returns private data to be used in subclass",
+        "Returns protected data to be used in subclass",
+        "Returns private data to be used in base class",
+        "Returns public data to be used in abstract class"
+      ],
+      "correctAnswer": "Returns private data to be used in subclass",
+      "category": "Inheritance"
+    },
+    {
+      "id": 30,
+      "question": "A superclass constructor is invoked:",
+      "options": [
+        "In a method of base class",
+        "In a method of derived class",
+        "In nested form of subclass constructor",
+        "None of the above"
+      ],
+      "correctAnswer": "In nested form of subclass constructor",
+      "category": "Inheritance"
+    },
+    {
+      "id": 31,
+      "question": "What is true for an abstract class?",
+      "options": [
+        "It allows creating the objects.",
+        "It does not allow creating the objects.",
+        "It returns an object to main( ) function.",
+        "It enables polymorphism."
+      ],
+      "correctAnswer": "It does not allow creating the objects.",
+      "category": "Inheritance"
+    },
+    {
+      "id": 32,
+      "question": "Assertion (A): The protected members will have their accessibility limited only to base and derived classes. Reason (R): These members of base class are used as private members for the same class and thus they can be accessed directly into the derived class. Based on the above discussion, choose an appropriate statement from the options given below:",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Inheritance"
+    },
+    {
+      "id": 33,
+      "question": "Assertion (A): Java supports multiple type of inheritance (a number of classes can be extended into a single base.) Reason (R): When a subclass inherits from multiple base classes, it is known as multiple inheritance. Based on the above discussion, choose an appropriate statement from the options given below:",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "",
+      "category": "Inheritance"
+    },
+    {
+      "id": 34,
+      "question": "What is the term used for wrapping data and functions as a unit?",
+      "options": [
+        "Inheritance",
+        "Polymorphism",
+        "Object",
+        "Encapsulation"
+      ],
+      "correctAnswer": "Encapsulation",
+      "category": "Inheritance"
+    },
+    {
+      "id": 35,
+      "question": "Characteristics of real world objects are referred to as:",
+      "options": [
+        "Methods of software objects",
+        "Classes of software objects",
+        "Data of software objects",
+        "Constructors of software objects"
+      ],
+      "correctAnswer": "Data of software objects",
+      "category": "OOP Concepts"
+    },
+    {
+      "id": 36,
+      "question": "The instance variable is a Java program.",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 37,
+      "question": "The new operator is used to create an instance of the class for storage of an object at run time.",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 38,
+      "question": "What is a blueprint or prototype or template to create similar objects. Each object of the class contains the characteristics and behaviour described within the class.",
+      "options": [
+        "An object is also called instance of a class.",
+        "The data members declared within a class are also termed as instance variables.",
+        "What type of data is accessible only within the scope of a class? private",
+        ""
+      ],
+      "correctAnswer": "",
+      "category": "Case Study"
+    },
+    {
+      "id": 39,
+      "question": "Which of the following is not true for recursive method?",
+      "options": [
+        "It calls itself",
+        "It is invoked in the body of the same method.",
+        "It does not return a value.",
+        "It uses only a single parameter."
+      ],
+      "correctAnswer": "",
+      "category": "Recursion"
+    },
+    {
+      "id": 40,
+      "question": "One of the advantages of recursive technique is:",
+      "options": [
+        "It uses only pass by value technique.",
+        "It is non-parameterised.",
+        "The code is clear and precise.",
+        "None of the above"
+      ],
+      "correctAnswer": "The code is clear and precise.",
+      "category": "Recursion"
+    },
+    {
+      "id": 41,
+      "question": "The recursive technique is different than iterative technique because:",
+      "options": [
+        "Recursive technique takes more time to execute than iterative technique.",
+        "Iterative construct is used for repeating the execution but recursive does not repeat the execution.",
+        "The logic creation is complex using iterative process than recursive process.",
+        "Recursive technique uses in-built method but not the iterative technique."
+      ],
+      "correctAnswer": "Recursive technique takes more time to execute than iterative technique.",
+      "category": "Recursion"
+    },
+    {
+      "id": 42,
+      "question": "A tail recursion uses recursive case:",
+      "options": [
+        "In the beginning of the recursive method.",
+        "At the end of the recursive method.",
+        "In between the statements of the recursive method.",
+        "As a formal parameter of the recursive method."
+      ],
+      "correctAnswer": "At the end of the recursive method.",
+      "category": "Recursion"
+    },
+    {
+      "id": 43,
+      "question": "Binary recursion is:",
+      "options": [
+        "An indirect recursion",
+        "A mutual recursion",
+        "Called from two points of the same method",
+        "A private method"
+      ],
+      "correctAnswer": "Called from two points of the same method",
+      "category": "Recursion"
+    },
+    {
+      "id": 44,
+      "question": "Every recursive function uses a condition to terminate, known as ‘Base Case’. The control terminates the function, if the condition for base case is true, otherwise it keeps calling the function.",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 45,
+      "question": "What type of data is not accessed in derived class?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "None of these"
+      ],
+      "correctAnswer": "private",
+      "category": "Inheritance"
+    },
+    {
+      "id": 46,
+      "question": "A private member method is only accessed:",
+      "options": [
+        "In the scope of the same class in which it is defined.",
+        "Anywhere outside the class in which it is defined.",
+        "In the derived class.",
+        "None of the above"
+      ],
+      "correctAnswer": "In the scope of the same class in which it is defined.",
+      "category": "Inheritance"
+    },
+    {
+      "id": 47,
+      "question": "................ is a common field for all the objects of a class.",
+      "options": [
+        "Local variable",
+        "Global variable",
+        "Class variable",
+        "Instance variable"
+      ],
+      "correctAnswer": "Class variable",
+      "category": "Inheritance"
+    },
+    {
+      "id": 48,
+      "question": "Which of the following data is a separate field for all the objects of a class?",
+      "options": [
+        "Local variable",
+        "Class variable",
+        "Instance variable",
+        "Primitive variable"
+      ],
+      "correctAnswer": "Instance variable",
+      "category": "Inheritance"
+    },
+    {
+      "id": 49,
+      "question": "Which of the following is a combination of more than one inheritance systems?",
+      "options": [
+        "Hybrid inheritance",
+        "Multiple inheritance",
+        "Single inheritance",
+        "Hierarchical inheritance"
+      ],
+      "correctAnswer": "Hybrid inheritance",
+      "category": "Inheritance"
+    },
+    {
+      "id": 50,
+      "question": "What is another name of multilevel inheritance?",
+      "options": [
+        "Single inheritance",
+        "Nested inheritance",
+        "Multiple inheritance",
+        "Derived inheritance"
+      ],
+      "correctAnswer": "Nested inheritance",
+      "category": "Inheritance"
+    },
+    {
+      "id": 51,
+      "question": "When inheritance takes place:",
+      "options": [
+        "Derived class acquires features from base class.",
+        "A base class acquires features from derived class.",
+        "A superclass acquires features from a target.",
+        "Base and derived classes mutually share data between them."
+      ],
+      "correctAnswer": "Derived class acquires features from base class.",
+      "category": "Inheritance"
+    },
+    {
+      "id": 52,
+      "question": "What does getter do during inheritance?",
+      "options": [
+        "Returns private data to be used in subclass",
+        "Returns protected data to be used in subclass",
+        "Returns private data to be used in base class",
+        "Returns public data to be used in abstract class"
+      ],
+      "correctAnswer": "Returns private data to be used in subclass",
+      "category": "Inheritance"
+    },
+    {
+      "id": 53,
+      "question": "A superclass constructor is invoked:",
+      "options": [
+        "In a method of base class",
+        "In a method of derived class",
+        "In nested form of subclass constructor",
+        "None of the above"
+      ],
+      "correctAnswer": "In nested form of subclass constructor",
+      "category": "Inheritance"
+    },
+    {
+      "id": 54,
+      "question": "What is true for an abstract class?",
+      "options": [
+        "It allows creating the objects.",
+        "It does not allow creating the objects.",
+        "It returns an object to main( ) function.",
+        "It enables polymorphism."
+      ],
+      "correctAnswer": "It does not allow creating the objects.",
+      "category": "Inheritance"
+    },
+    {
+      "id": 55,
+      "question": "What type of data is not accessed in derived class?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "None of these"
+      ],
+      "correctAnswer": "private",
+      "category": "Inheritance"
+    },
+    {
+      "id": 56,
+      "question": "The protected members will have their accessibility limited only to base and derived classes. These members of base class are used as private members for the same class and thus they can be accessed directly into the derived class.",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 57,
+      "question": "Java supports multiple type of inheritance (a number of classes can be extended into a single base.) When a subclass inherits from multiple base classes, it is known as multiple inheritance.",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 58,
+      "question": "What is the term used for wrapping data and functions as a unit?",
+      "options": [
+        "Inheritance",
+        "Polymorphism",
+        "Object",
+        "Encapsulation"
+      ],
+      "correctAnswer": "Encapsulation",
+      "category": "OOP Concepts"
+    },
+    {
+      "id": 59,
+      "question": "The protected members will have their accessibility limited only to base and derived classes.",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 60,
+      "question": "Java supports multiple type of inheritance (a number of classes can be extended into a single base.)",
+      "options": [
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+        "Both Assertion (A) and Reason (R) are true and Reason (R) is not the correct explanation of Assertion(A).",
+        "Assertion (A) is true but Reason (R) is false.",
+        "Assertion (A) is false but Reason (R) is true."
+      ],
+      "correctAnswer": "Assertion (A) is false but Reason (R) is true.",
+      "category": "Assertion and Reason"
+    },
+    {
+      "id": 61,
+      "question": "What is the term used for wrapping data and functions as a unit?",
+      "options": [
+        "Inheritance",
+        "Polymorphism",
+        "Object",
+        "Encapsulation"
+      ],
+      "correctAnswer": "Encapsulation",
+      "category": "Case Study"
+    },
+    {
+      "id": 62,
+      "question": "What is the term used for wrapping data and functions as a unit?",
+      "options": [
+        "What is the term used for wrapping data and functions as a unit? Encapsulation",
+        "Polymorphism",
+        "Inheritance",
+        "Encapsulation"
+      ],
+      "correctAnswer": "Encapsulation",
+      "category": "Case Study"
+    },
+    {
+      "id": 63,
+      "question": "Which of the following is a primary color?",
+      "options": [
+        "Green",
+        "Blue",
+        "Yellow",
+        "Orange"
+      ],
+      "correctAnswer": "Blue",
+      "category": "Art"
+    },
+    {
+      "id": 64,
+      "question": "What is the square root of 64?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "8",
+      "category": "Math"
+    }
+  ]
+}
