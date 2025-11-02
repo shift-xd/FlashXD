@@ -1,0 +1,287 @@
+{
+  "deckName": "Organic Chemistry - Amines PYQs",
+  "flashcards": [
+    {
+      "id": 1,
+      "question": "Why does aniline not undergo Friedel-Crafts reaction?",
+      "answer": "Aniline does not undergo Friedel-Crafts reaction because the nitrogen atom of the -NH₂ group forms a complex with the Lewis acid catalyst (AlCl₃), making the catalyst unavailable and the aromatic ring less reactive towards electrophilic substitution.",
+      "category": "Amines",
+      "detailedExplanation": "In Friedel-Crafts reactions, a Lewis acid catalyst like AlCl₃ is required to generate electrophiles. However, the lone pair on nitrogen in aniline coordinates strongly with AlCl₃, forming a complex: C₆H₅NH₂·AlCl₃. This deactivates both the catalyst and the aromatic ring since the nitrogen becomes positively charged, making the ring less electron-rich and thus less reactive towards electrophilic substitution.",
+      "keyPoints": [
+        "Nitrogen lone pair coordinates with Lewis acid catalyst",
+        "Catalyst becomes unavailable for reaction",
+        "Aromatic ring gets deactivated for electrophilic substitution"
+      ],
+      "examples": [
+        "Aniline + AlCl₃ → Complex formation, no Friedel-Crafts reaction occurs",
+        "Compared to phenol which undergoes Friedel-Crafts reaction easily"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Why is (CH₃)₂NH more basic than (CH₃)₃N in aqueous solution?",
+      "answer": "In aqueous solution, (CH₃)₂NH is more basic than (CH₃)₃N due to a combination of inductive effect and solvation effect. While trimethylamine has more +I effect, dimethylamine experiences better solvation of its conjugate acid.",
+      "category": "Amines",
+      "detailedExplanation": "The basicity trend in aqueous solution for methylamines is: (CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃. Although (CH₃)₃N has more electron-donating methyl groups, its conjugate acid [(CH₃)₃NH]⁺ has only one N-H bond for hydrogen bonding with water, resulting in poorer solvation. In contrast, [(CH₃)₂NH₂]⁺ has two N-H bonds, allowing better solvation and stabilization in aqueous medium, making dimethylamine more basic.",
+      "keyPoints": [
+        "Steric hindrance reduces solvation in tertiary amines",
+        "Conjugate acid of secondary amine has better hydrogen bonding with water",
+        "Combination of inductive and solvation effects determines basicity"
+      ],
+      "examples": [
+        "pKb values: NH₃ (4.75), CH₃NH₂ (3.38), (CH₃)₂NH (3.27), (CH₃)₃N (4.21)",
+        "In gaseous phase, basicity follows: (CH₃)₃N > (CH₃)₂NH > CH₃NH₂ > NH₃"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Why do primary amines have higher boiling points than tertiary amines?",
+      "answer": "Primary amines have higher boiling points than tertiary amines because primary amines can form intermolecular hydrogen bonds due to the presence of N-H bonds, while tertiary amines cannot form such bonds as they lack N-H bonds.",
+      "category": "Amines",
+      "detailedExplanation": "Primary amines (R-NH₂) contain two N-H bonds that allow extensive intermolecular hydrogen bonding between molecules. This requires more energy to break during boiling. Tertiary amines (R₃N) have no N-H bonds and can only form weaker dipole-dipole interactions and van der Waals forces, resulting in lower boiling points despite similar molecular weights.",
+      "keyPoints": [
+        "Primary amines form intermolecular H-bonds via N-H bonds",
+        "Tertiary amines lack N-H bonds, so no intermolecular H-bonding",
+        "H-bonding requires more energy to break, hence higher boiling points"
+      ],
+      "examples": [
+        "Boiling point: CH₃CH₂NH₂ (16.6°C) vs (CH₃CH₂)₃N (89°C)",
+        "Butanamine (78°C) > Butane (-0.5°C) due to H-bonding in amine"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is the Hofmann bromamide degradation reaction?",
+      "answer": "Hofmann bromamide degradation is a reaction where primary amides are converted to primary amines with one less carbon atom using bromine and sodium hydroxide.",
+      "category": "Amines",
+      "detailedExplanation": "The reaction involves treatment of a primary amide (RCONH₂) with bromine (Br₂) and sodium hydroxide (NaOH), resulting in the formation of a primary amine (RNH₂) with one carbon less than the original amide. The mechanism involves formation of an isocyanate intermediate which rearranges to give the amine. The reaction follows: RCONH₂ + Br₂ + 4NaOH → RNH₂ + Na₂CO₃ + 2NaBr + 2H₂O",
+      "keyPoints": [
+        "Converts amides to amines with one less carbon atom",
+        "Uses Br₂ and NaOH as reagents",
+        "Proceeds through isocyanate intermediate",
+        "Used for descending homologous series"
+      ],
+      "examples": [
+        "CH₃CONH₂ + Br₂ + 4NaOH → CH₃NH₂ + Na₂CO₃ + 2NaBr + 2H₂O",
+        "C₆H₅CONH₂ → C₆H₅NH₂ (Aniline)"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What is diazotisation?",
+      "answer": "Diazotisation is the process of converting primary aromatic amines into diazonium salts using nitrous acid (NaNO₂ + HCl) at low temperatures (0-5°C).",
+      "category": "Amines",
+      "detailedExplanation": "Diazotisation involves the reaction of primary aromatic amines with nitrous acid (generated in situ from NaNO₂ and HCl) at 0-5°C to form diazonium salts. The general reaction is: Ar-NH₂ + NaNO₂ + 2HCl → Ar-N₂⁺Cl⁻ + NaCl + 2H₂O. These diazonium salts are highly useful intermediates in synthetic organic chemistry for preparing various substituted aromatic compounds through replacement of the diazo group.",
+      "keyPoints": [
+        "Converts primary aromatic amines to diazonium salts",
+        "Uses NaNO₂ + HCl at 0-5°C",
+        "Diazonium salts are versatile synthetic intermediates",
+        "Temperature control is crucial to prevent decomposition"
+      ],
+      "examples": [
+        "C₆H₅NH₂ + NaNO₂ + 2HCl → C₆H₅N₂⁺Cl⁻ + NaCl + 2H₂O",
+        "Used in preparation of azo dyes, phenols, halobenzenes, etc."
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Why are aromatic diazonium salts more stable than aliphatic diazonium salts?",
+      "answer": "Aromatic diazonium salts are more stable than aliphatic diazonium salts due to resonance stabilization of the diazonium group with the aromatic ring.",
+      "category": "Amines",
+      "detailedExplanation": "In aromatic diazonium salts (Ar-N₂⁺), the positive charge on the terminal nitrogen is delocalized into the aromatic ring through resonance. This resonance stabilization makes aromatic diazonium salts relatively stable, especially at low temperatures (0-5°C). In contrast, aliphatic diazonium salts (R-N₂⁺) lack this resonance stabilization and are highly unstable, decomposing immediately to give carbocations and nitrogen gas.",
+      "keyPoints": [
+        "Resonance stabilization in aromatic diazonium salts",
+        "No resonance possible in aliphatic diazonium salts",
+        "Aromatic salts stable at 0-5°C, aliphatic salts decompose immediately"
+      ],
+      "examples": [
+        "C₆H₅N₂⁺Cl⁻ stable at 0-5°C, while CH₃N₂⁺Cl⁻ decomposes to CH₃⁺ + N₂",
+        "Benzenediazonium chloride can be stored, methanediazonium chloride cannot"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What is the chemical test to distinguish between Aniline and N,N-dimethylaniline?",
+      "answer": "The carbylamine test can distinguish them: Aniline gives foul-smelling isocyanide with CHCl₃ and alc. KOH, while N,N-dimethylaniline does not react.",
+      "category": "Amines",
+      "detailedExplanation": "Primary amines (like aniline) undergo carbylamine reaction with chloroform and alcoholic potassium hydroxide to form foul-smelling isocyanides. Secondary and tertiary amines (like N,N-dimethylaniline) do not give this reaction. Reaction: C₆H₅NH₂ + CHCl₃ + 3KOH → C₆H₅NC + 3KCl + 3H₂O. The offensive smell of phenyl isocyanide confirms the presence of primary amine.",
+      "keyPoints": [
+        "Only primary amines give carbylamine test",
+        "Forms isocyanides with foul smell",
+        "Secondary/tertiary amines don't react",
+        "Uses CHCl₃ + alc. KOH"
+      ],
+      "examples": [
+        "Aniline + CHCl₃ + alc. KOH → Phenyl isocyanide (foul smell) - positive test",
+        "N,N-dimethylaniline + CHCl₃ + alc. KOH → No reaction - negative test"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Why is Gabriel phthalimide synthesis not preferred for preparing aromatic primary amines?",
+      "answer": "Gabriel phthalimide synthesis is not preferred for aromatic primary amines because aryl halides do not undergo nucleophilic substitution easily with phthalimide ion due to resonance stabilization and partial double bond character of C-X bond.",
+      "category": "Amines",
+      "detailedExplanation": "In Gabriel synthesis, phthalimide anion acts as a nucleophile. Aryl halides are unreactive towards nucleophilic substitution under normal conditions because: (1) The C-X bond has partial double bond character due to resonance, (2) The ring carbon is sp² hybridized, making it less susceptible to nucleophilic attack, (3) The leaving group (X⁻) is a poor leaving group in aromatic systems. Aliphatic halides work well as they undergo SN2 reactions easily.",
+      "keyPoints": [
+        "Aryl halides resistant to nucleophilic substitution",
+        "C-X bond has partial double bond character",
+        "sp² hybridized carbon less reactive than sp³",
+        "Only aliphatic primary amines can be prepared"
+      ],
+      "examples": [
+        "CH₃CH₂Br + Potassium phthalimide → N-ethylphthalimide → Ethylamine",
+        "C₆H₅Br + Potassium phthalimide → No reaction"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What happens when a primary amine reacts with benzene sulphonyl chloride?",
+      "answer": "Primary amine yields N-alkylbenzenesulphonamide which is soluble in alkali due to the presence of acidic hydrogen attached to nitrogen.",
+      "category": "Amines",
+      "detailedExplanation": "In Hinsberg test, primary amines react with benzenesulphonyl chloride to form N-alkylbenzenesulphonamides. These contain an acidic hydrogen attached to nitrogen that can be removed by NaOH, forming a water-soluble sodium salt: R-NH₂ + C₆H₅SO₂Cl → C₆H₅SO₂NHR → C₆H₅SO₂NR⁻Na⁺ (soluble in alkali). This distinguishes primary amines from secondary amines which give products insoluble in alkali.",
+      "keyPoints": [
+        "Primary amines give sulphonamides soluble in alkali",
+        "Acidic H on N forms salt with NaOH",
+        "Forms basis of Hinsberg test for amine distinction",
+        "Secondary amines give insoluble sulphonamides"
+      ],
+      "examples": [
+        "CH₃NH₂ + C₆H₅SO₂Cl → C₆H₅SO₂NHCH₃ → NaOH soluble salt",
+        "(CH₃)₂NH + C₆H₅SO₂Cl → C₆H₅SO₂N(CH₃)₂ → Insoluble in NaOH"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Why are aliphatic amines stronger bases than ammonia?",
+      "answer": "Aliphatic amines are stronger bases than ammonia due to the +I (electron-donating) effect of alkyl groups which increases electron density on nitrogen, making it better proton acceptor.",
+      "category": "Amines",
+      "detailedExplanation": "Alkyl groups in aliphatic amines are electron-donating through +I effect and hyperconjugation. This increases the electron density on the nitrogen atom, making the lone pair more available for protonation. The stability of the conjugate acid (alkylammonium ion) is also enhanced through dispersal of positive charge and solvation effects. This makes aliphatic amines stronger bases than ammonia.",
+      "keyPoints": [
+        "+I effect of alkyl groups increases electron density on N",
+        "Lone pair becomes more available for protonation",
+        "Conjugate acid stabilized by alkyl groups",
+        "Basicity order: R₂NH > RNH₂ > R₃N > NH₃ (in aqueous solution)"
+      ],
+      "examples": [
+        "pKb: NH₃ (4.75), CH₃NH₂ (3.38), (CH₃)₂NH (3.27)",
+        "Gas phase basicity: (CH₃)₃N > (CH₃)₂NH > CH₃NH₂ > NH₃"
+      ]
+    }
+  ],
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "Out of the following, the strongest base in aqueous solution is:",
+      "options": [
+        "Methylamine",
+        "Dimethylamine", 
+        "Trimethylamine",
+        "Aniline"
+      ],
+      "correctAnswer": "Dimethylamine",
+      "category": "Amines",
+      "detailedExplanation": "In aqueous solution, the basicity order for methylamines is: (CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃. Although trimethylamine has more electron-donating groups, its conjugate acid has poorer solvation due to steric hindrance. Dimethylamine strikes the best balance between electron donation and solvation of its conjugate acid.",
+      "keyPoints": [
+        "Aqueous basicity depends on both inductive effect and solvation",
+        "(CH₃)₂NH has optimal balance of factors",
+        "Steric hindrance reduces solvation in (CH₃)₃N",
+        "Aniline is weakest due to resonance with ring"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "CH₂-NH₂, on heating with CHCl₃ and alcoholic KOH gives foul smell of:",
+      "options": [
+        "CH₂OH",
+        "CH₂NC", 
+        "CH₂CN",
+        "CH₂Cl"
+      ],
+      "correctAnswer": "CH₂NC",
+      "category": "Amines",
+      "detailedExplanation": "This is the carbylamine reaction where primary amines react with chloroform and alcoholic KOH to form isocyanides which have extremely foul odor. The reaction is specific for primary amines and doesn't work with secondary or tertiary amines.",
+      "keyPoints": [
+        "Carbylamine reaction specific for primary amines",
+        "Forms isocyanides (R-NC) with foul smell",
+        "Uses CHCl₃ + alc. KOH",
+        "Test for distinguishing primary amines"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "CH₃CONH₂ on reaction with NaOH and Br₂ in alcoholic medium gives:",
+      "options": [
+        "CH₃CH₂NH₂",
+        "CH₃CH₂Br",
+        "CH₃NH₂",
+        "CH₃COONa"
+      ],
+      "correctAnswer": "CH₃NH₂",
+      "category": "Amines", 
+      "detailedExplanation": "This is Hofmann bromamide degradation reaction where amides are converted to primary amines with one carbon less. CH₃CONH₂ loses the carbonyl carbon and gives methylamine (CH₃NH₂).",
+      "keyPoints": [
+        "Hofmann degradation of amides",
+        "Amine formed has one less carbon atom",
+        "Uses Br₂ + NaOH",
+        "Proceeds through isocyanate intermediate"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Which of the following reagents is used for the Hinsberg test of amines?",
+      "options": [
+        "C₆H₅COCl",
+        "CH₃COCl",
+        "C₆H₅-SO₃H", 
+        "C₆H₅-SO₂Cl"
+      ],
+      "correctAnswer": "C₆H₅-SO₂Cl",
+      "category": "Amines",
+      "detailedExplanation": "Hinsberg test uses benzenesulphonyl chloride (C₆H₅-SO₂Cl) to distinguish between primary, secondary and tertiary amines based on the solubility of the resulting sulphonamides in alkali.",
+      "keyPoints": [
+        "Hinsberg reagent is benzenesulphonyl chloride",
+        "Primary amines give alkali-soluble products",
+        "Secondary amines give alkali-insoluble products", 
+        "Tertiary amines don't react or give different products"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "The reaction of ammonia with a large excess of CH₃Cl will give mainly:",
+      "options": [
+        "C₂H₆",
+        "(CH₃)₂NH",
+        "(CH₃)₄N⁺Cl⁻", 
+        "CH₃NH₂"
+      ],
+      "correctAnswer": "(CH₃)₄N⁺Cl⁻",
+      "category": "Amines",
+      "detailedExplanation": "When ammonia reacts with excess alkyl halide, exhaustive alkylation occurs leading to quaternary ammonium salt formation. With excess CH₃Cl, all four hydrogens of ammonia get replaced by methyl groups giving tetramethylammonium chloride.",
+      "keyPoints": [
+        "Excess alkyl halide leads to exhaustive alkylation",
+        "Forms quaternary ammonium salts",
+        "All H atoms of NH₃ get replaced",
+        "Reaction: NH₃ + excess CH₃Cl → (CH₃)₄N⁺Cl⁻"
+      ]
+    },
+    {
+      "id": 6, 
+      "question": "Among the following amines, which one is expected to have the lowest boiling point?",
+      "options": [
+        "C₂H₅NH₂",
+        "(C₂H₅)₃N",
+        "(C₂H₅)₂NH",
+        "CH₃NH₂"
+      ],
+      "correctAnswer": "(C₂H₅)₃N",
+      "category": "Amines",
+      "detailedExplanation": "Tertiary amines have the lowest boiling points among isomeric amines because they cannot form intermolecular hydrogen bonds due to absence of N-H bonds. They rely only on weaker dipole-dipole interactions and van der Waals forces.",
+      "keyPoints": [
+        "Tertiary amines cannot form intermolecular H-bonds",
+        "Primary amines have highest boiling points due to H-bonding",
+        "Boiling point order: 1° > 2° > 3° amines",
+        "H-bonding requires more energy to break"
+      ]
+    }
+  ]
+}
