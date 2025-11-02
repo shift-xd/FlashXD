@@ -1,0 +1,291 @@
+{
+  "deckName": "Organic Chemistry - Carbonyl Compounds PYQs",
+  "flashcards": [
+    {
+      "id": 1,
+      "question": "Why does carboxylic acid not give reactions of carbonyl group?",
+      "answer": "Carboxylic acids do not give typical carbonyl reactions because the carbonyl carbon is less electrophilic due to resonance with the adjacent hydroxyl group, making it less reactive towards nucleophilic addition.",
+      "category": "Carboxylic Acids",
+      "detailedExplanation": "In carboxylic acids (-COOH), the carbonyl group participates in resonance with the -OH group. The lone pair on oxygen delocalizes into the carbonyl π* orbital, creating a partial double bond character between carbon and oxygen. This resonance (C=O ↔ C-O⁻ with O⁺-H) makes the carbonyl carbon less electrophilic and less susceptible to nucleophilic attack compared to aldehydes and ketones.",
+      "keyPoints": [
+        "Resonance between carbonyl and hydroxyl groups",
+        "Carbonyl carbon becomes less electrophilic",
+        "Partial double bond character reduces reactivity",
+        "Nucleophilic addition reactions are inhibited"
+      ],
+      "examples": [
+        "R-COOH does not react with NaHSO₃ unlike aldehydes/ketones",
+        "No addition of HCN to carboxylic acids"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Why is benzoic acid a stronger acid than acetic acid?",
+      "answer": "Benzoic acid is stronger than acetic acid because the phenyl group stabilizes the conjugate base through resonance, while the methyl group in acetic acid has an electron-donating effect that destabilizes the conjugate base.",
+      "category": "Carboxylic Acids",
+      "detailedExplanation": "The conjugate base of benzoic acid (benzoate ion) is stabilized by resonance delocalization of the negative charge over the entire carboxylate group and into the aromatic ring. In contrast, the methyl group in acetate ion has a +I (electron-donating) effect that increases electron density on the carboxylate oxygen, making it less stable. This greater stability of benzoate ion makes benzoic acid a stronger acid (pKa ≈ 4.2) compared to acetic acid (pKa ≈ 4.76).",
+      "keyPoints": [
+        "Benzoate ion stabilized by resonance with aromatic ring",
+        "Acetate ion destabilized by +I effect of methyl group",
+        "Resonance stabilization lowers pKa value",
+        "Aromatic acids generally stronger than aliphatic acids"
+      ],
+      "examples": [
+        "pKa: Benzoic acid (4.20) < Acetic acid (4.76)",
+        "Formic acid (pKa 3.75) is even stronger due to no alkyl group"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Why is CH₃CHO more reactive than CH₃COCH₃ towards reaction with HCN?",
+      "answer": "CH₃CHO is more reactive than CH₃COCH₃ because aldehydes have less steric hindrance and greater electrophilicity at the carbonyl carbon compared to ketones.",
+      "category": "Aldehydes/Ketones",
+      "detailedExplanation": "Two factors make aldehydes more reactive than ketones towards nucleophilic addition: 1) Steric effect: Aldehydes have one small H atom and one R group, while ketones have two R groups creating more steric hindrance around the carbonyl carbon. 2) Electronic effect: Alkyl groups are electron-donating, so ketones have more electron density on carbonyl carbon, making it less electrophilic. Both factors make nucleophilic attack easier on aldehydes than ketones.",
+      "keyPoints": [
+        "Less steric hindrance in aldehydes",
+        "Alkyl groups in ketones reduce electrophilicity",
+        "Electron-donating effect of alkyl groups",
+        "Reactivity order: HCHO > RCHO > RCOR'"
+      ],
+      "examples": [
+        "Benzaldehyde less reactive than acetaldehyde due to resonance",
+        "Formaldehyde most reactive aldehyde"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Why is chloracetic acid more acidic than acetic acid?",
+      "answer": "Chloracetic acid is more acidic than acetic acid because the -I (electron-withdrawing) effect of chlorine stabilizes the conjugate base by dispersing the negative charge.",
+      "category": "Carboxylic Acids",
+      "detailedExplanation": "Chlorine is highly electronegative and exerts a strong -I effect. In chloracetate ion, the electron-withdrawing chlorine atom helps to disperse the negative charge on the carboxylate group, making the conjugate base more stable. This increased stability of the conjugate base makes chloracetic acid a stronger acid. The pKa values are: acetic acid (4.76) and chloracetic acid (2.87).",
+      "keyPoints": [
+        "-I effect of chlorine stabilizes conjugate base",
+        "Negative charge dispersal increases stability",
+        "Electron-withdrawing groups increase acidity",
+        "pKa decreases with increasing electronegativity of substituent"
+      ],
+      "examples": [
+        "Acidity order: ClCH₂COOH > FCH₂COOH > CH₃COOH",
+        "Trichloroacetic acid (pKa 0.66) very strong due to three Cl atoms"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Why does aromatic carboxylic acids not undergo Friedel-Crafts reaction?",
+      "answer": "Aromatic carboxylic acids do not undergo Friedel-Crafts reaction because the carboxyl group deactivates the ring and coordinates with the Lewis acid catalyst, making both the catalyst and substrate unavailable.",
+      "category": "Carboxylic Acids",
+      "detailedExplanation": "Two reasons prevent Friedel-Crafts reaction in aromatic carboxylic acids: 1) The -COOH group is strongly deactivating and meta-directing due to -I and -R effects, making the ring less electron-rich and unreactive towards electrophilic substitution. 2) The carbonyl oxygen can coordinate with the Lewis acid catalyst (AlCl₃), forming a complex that deactivates the catalyst. This dual deactivation prevents the reaction from occurring.",
+      "keyPoints": [
+        "-COOH group strongly deactivates aromatic ring",
+        "Meta-directing nature reduces reactivity",
+        "Coordination with Lewis acid deactivates catalyst",
+        "Both substrate and catalyst become unavailable"
+      ],
+      "examples": [
+        "Benzoic acid + AlCl₃ → Complex formation, no reaction",
+        "Benzene undergoes Friedel-Crafts but benzoic acid does not"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Why is α-hydrogen of carbonyl compounds acidic in nature?",
+      "answer": "The α-hydrogen of carbonyl compounds is acidic because the carbanion formed after deprotonation is stabilized by resonance with the carbonyl group.",
+      "category": "Carbonyl Compounds",
+      "detailedExplanation": "When α-hydrogen is removed from a carbonyl compound, it forms a carbanion that is stabilized through resonance with the adjacent carbonyl group. The negative charge on the α-carbon delocalizes onto the oxygen atom, forming an enolate ion. This resonance stabilization makes the α-hydrogen relatively acidic. The pKa of α-hydrogens in carbonyl compounds is around 16-20, much lower than typical alkane C-H bonds (pKa ~ 50).",
+      "keyPoints": [
+        "Enolate ion formation through resonance",
+        "Negative charge delocalized onto oxygen",
+        "Resonance stabilization lowers pKa",
+        "Enables various reactions like aldol condensation"
+      ],
+      "examples": [
+        "Acetaldehyde α-H pKa ≈ 17, acetone α-H pKa ≈ 20",
+        "Enolate ions are key intermediates in many reactions"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Why is oxidation of propanal easier than propanone?",
+      "answer": "Oxidation of propanal is easier than propanone because aldehydes have a hydrogen atom attached to the carbonyl carbon that can be easily oxidized, while ketones require carbon-carbon bond cleavage.",
+      "category": "Aldehydes/Ketones",
+      "detailedExplanation": "Aldehydes can be easily oxidized to carboxylic acids using mild oxidizing agents because they have a hydrogen atom directly attached to the carbonyl carbon (R-CHO → R-COOH). Ketones lack this hydrogen and require stronger conditions and carbon-carbon bond cleavage for oxidation. This makes aldehyde oxidation much more facile and occurs under milder conditions.",
+      "keyPoints": [
+        "Aldehydes have oxidizable H atom on carbonyl carbon",
+        "Ketones require C-C bond cleavage for oxidation",
+        "Mild oxidants like Tollens' reagent work for aldehydes only",
+        "Ketones resist oxidation by common oxidizing agents"
+      ],
+      "examples": [
+        "Tollens' test: Aldehydes give silver mirror, ketones do not",
+        "Fehling's test: Aldehydes reduce Cu²⁺ to Cu⁺, ketones do not"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What is the Wolff-Kishner reduction?",
+      "answer": "Wolff-Kishner reduction is a method to convert carbonyl compounds (aldehydes/ketones) to hydrocarbons using hydrazine and strong base, with elimination of nitrogen gas.",
+      "category": "Carbonyl Compounds",
+      "detailedExplanation": "The Wolff-Kishner reduction involves heating a carbonyl compound with hydrazine (H₂N-NH₂) in the presence of a strong base like KOH in high-boiling solvent like ethylene glycol. The reaction proceeds through formation of a hydrazone intermediate which decomposes to give the hydrocarbon and nitrogen gas. Overall: R₂C=O → R₂CH₂ + N₂. This method is particularly useful for acid-sensitive compounds.",
+      "keyPoints": [
+        "Converts C=O to CH₂ group",
+        "Uses H₂N-NH₂ + KOH in ethylene glycol",
+        "Proceeds through hydrazone intermediate",
+        "Eliminates N₂ gas as byproduct"
+      ],
+      "examples": [
+        "Acetone → Propane: (CH₃)₂C=O → (CH₃)₂CH₂",
+        "Benzophenone → Diphenylmethane: (C₆H₅)₂C=O → (C₆H₅)₂CH₂"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What is the Etard reaction?",
+      "answer": "Etard reaction is the oxidation of toluene to benzaldehyde using chromyl chloride (CrO₂Cl₂).",
+      "category": "Aldehydes",
+      "detailedExplanation": "The Etard reaction involves the oxidation of methyl group attached to aromatic ring to aldehyde group using chromyl chloride (CrO₂Cl₂) in non-polar solvent like CS₂ or CCl₄. The reaction proceeds through formation of a chromium complex which on hydrolysis gives benzaldehyde. This method selectively oxidizes methyl group to aldehyde without over-oxidation to carboxylic acid.",
+      "keyPoints": [
+        "Oxidizes -CH₃ to -CHO on aromatic ring",
+        "Uses CrO₂Cl₂ in CS₂/CCl₄",
+        "Forms chromium complex intermediate",
+        "Selective oxidation stops at aldehyde stage"
+      ],
+      "examples": [
+        "Toluene → Benzaldehyde: C₆H₅CH₃ → C₆H₅CHO",
+        "p-Xylene → Terephthalaldehyde"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What is Stephen reduction?",
+      "answer": "Stephen reduction is the conversion of nitriles to aldehydes using stannous chloride and hydrochloric acid.",
+      "category": "Nitriles/Aldehydes",
+      "detailedExplanation": "Stephen reduction involves the reduction of nitriles (R-CN) to aldehydes (R-CHO) using stannous chloride (SnCl₂) in hydrochloric acid. The reaction proceeds through formation of an iminium salt intermediate which on hydrolysis gives the aldehyde. This method provides a direct route from nitriles to aldehydes without over-reduction to primary amines.",
+      "keyPoints": [
+        "Converts R-CN to R-CHO",
+        "Uses SnCl₂ + HCl",
+        "Proceeds through iminium salt intermediate",
+        "Selective reduction stops at aldehyde stage"
+      ],
+      "examples": [
+        "Acetonitrile → Acetaldehyde: CH₃CN → CH₃CHO",
+        "Benzonitrile → Benzaldehyde: C₆H₅CN → C₆H₅CHO"
+      ]
+    }
+  ],
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "Iodoform test is not given by:",
+      "options": [
+        "Ethanol",
+        "Ethanal", 
+        "Pentan-2-one",
+        "Pentan-3-one"
+      ],
+      "correctAnswer": "Pentan-3-one",
+      "category": "Carbonyl Compounds",
+      "detailedExplanation": "Iodoform test is given by compounds having CH₃-C=O group (methyl ketones) or CH₃-CH-OH group (secondary alcohols that can be oxidized to methyl ketones). Pentan-3-one (CH₃CH₂COCH₂CH₃) does not have a methyl group attached to carbonyl carbon, so it doesn't give iodoform test.",
+      "keyPoints": [
+        "Iodoform test requires CH₃-C=O or CH₃-CH-OH groups",
+        "Pentan-3-one has ethyl groups on both sides",
+        "Only methyl ketones and acetaldehyde give positive test",
+        "Yellow precipitate of CHI₃ indicates positive test"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What is the correct IUPAC name of CH₃-C(CH₃)₂-CH₂-COOH?",
+      "options": [
+        "2,2-Dimethylbutanoic acid",
+        "2-Carboxyl-2-methylbutane",
+        "2-Ethyl-2-methylpropanoic acid", 
+        "3-Methylbutane carboxylic acid"
+      ],
+      "correctAnswer": "2,2-Dimethylbutanoic acid",
+      "category": "Nomenclature",
+      "detailedExplanation": "The compound CH₃-C(CH₃)₂-CH₂-COOH has a 4-carbon chain with carboxyl carbon as C1. The structure is: CH₃-C(CH₃)₂-CH₂-COOH. Numbering from carboxyl end gives: C1-COOH, C2-C(CH₃)₂, C3-CH₂, C4-CH₃. So it's 2,2-dimethylbutanoic acid.",
+      "keyPoints": [
+        "Carboxyl carbon is always C1 in carboxylic acids",
+        "Longest chain including COOH has 4 carbons",
+        "Two methyl groups on C2",
+        "Butanoic acid with 2,2-dimethyl substitution"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is the correct increasing order of boiling points?",
+      "options": [
+        "CH₃CHO < CH₃CH₂OH < CH₃COOH",
+        "CH₃CH₂OH < CH₃CHO < CH₃COOH", 
+        "CH₃CHO < CH₃COOH < CH₃CH₂OH",
+        "CH₃COOH < CH₃CHO < CH₃CH₂OH"
+      ],
+      "correctAnswer": "CH₃CHO < CH₃CH₂OH < CH₃COOH",
+      "category": "Physical Properties",
+      "detailedExplanation": "Boiling points depend on intermolecular forces: CH₃CHO (acetaldehyde) has dipole-dipole interactions (bp ~ 20°C), CH₃CH₂OH (ethanol) has hydrogen bonding (bp ~ 78°C), CH₃COOH (acetic acid) has stronger hydrogen bonding and forms dimers (bp ~ 118°C). So the order is CH₃CHO < CH₃CH₂OH < CH₃COOH.",
+      "keyPoints": [
+        "Acetic acid forms dimers through H-bonding",
+        "Ethanol has intermolecular H-bonding",
+        "Acetaldehyde has only dipole-dipole interactions",
+        "Dimerization increases boiling point significantly"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Which of the following gives positive Tollen's test?",
+      "options": [
+        "Acetone",
+        "Acetophenone", 
+        "Benzophenone",
+        "Benzaldehyde"
+      ],
+      "correctAnswer": "Benzaldehyde",
+      "category": "Aldehydes/Ketones",
+      "detailedExplanation": "Tollen's test is given only by aldehydes, which can reduce [Ag(NH₃)₂]⁺ to metallic silver (silver mirror). Ketones do not give this test. Among the options, only benzaldehyde is an aldehyde, while acetone, acetophenone and benzophenone are ketones.",
+      "keyPoints": [
+        "Tollen's test specific for aldehydes",
+        "Aldehydes reduce Ag⁺ to Ag (silver mirror)",
+        "Ketones do not reduce Tollen's reagent",
+        "Test distinguishes aldehydes from ketones"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "The increasing order of reactivity towards nucleophilic addition is:",
+      "options": [
+        "C₆H₅COCH₃ < CH₃COCH₃ < CH₃CHO < HCHO",
+        "HCHO < CH₃CHO < CH₃COCH₃ < C₆H₅COCH₃",
+        "CH₃COCH₃ < C₆H₅COCH₃ < CH₃CHO < HCHO", 
+        "C₆H₅COCH₃ < CH₃CHO < CH₃COCH₃ < HCHO"
+      ],
+      "correctAnswer": "C₆H₅COCH₃ < CH₃COCH₃ < CH₃CHO < HCHO",
+      "category": "Carbonyl Reactivity",
+      "detailedExplanation": "Reactivity towards nucleophilic addition follows: HCHO (most reactive, no steric/electronic hindrance) > CH₃CHO (one small H) > CH₃COCH₃ (two alkyl groups, steric hindrance) > C₆H₅COCH₃ (resonance stabilization makes carbonyl carbon less electrophilic).",
+      "keyPoints": [
+        "Steric hindrance decreases reactivity",
+        "Electron-donating groups decrease electrophilicity",
+        "Aromatic ketones least reactive due to resonance",
+        "Formaldehyde most reactive aldehyde"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is the strongest acid?",
+      "options": [
+        "CH₃COOH",
+        "HCOOH", 
+        "ClCH₂COOH",
+        "FCH₂COOH"
+      ],
+      "correctAnswer": "FCH₂COOH",
+      "category": "Carboxylic Acids",
+      "detailedExplanation": "Acidity order: FCH₂COOH > ClCH₂COOH > HCOOH > CH₃COOH. Fluorine is most electronegative, so it exerts the strongest -I effect, best stabilizing the conjugate base. The pKa values are: FCH₂COOH (2.66), ClCH₂COOH (2.87), HCOOH (3.75), CH₃COOH (4.76).",
+      "keyPoints": [
+        "Electron-withdrawing groups increase acidity",
+        "Fluorine most electronegative, strongest -I effect",
+        "pKa decreases with increasing electronegativity",
+        "Halogen substitution dramatically increases acidity"
+      ]
+    }
+  ]
+}
