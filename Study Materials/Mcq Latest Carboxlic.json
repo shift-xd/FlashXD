@@ -1,0 +1,139 @@
+{
+  "deckName": "Chemistry - Carboxylic Acids",
+  "flashcards": [
+    {
+      "id": 1,
+      "question": "For a carboxylic acid higher the value of ...... or lower the value of ...... , greater is its acidic strength.",
+      "answer": "Kₐ, pKₐ",
+      "category": "Chemistry"
+    },
+    {
+      "id": 2,
+      "question": "The carboxylate ion is ...... stable than carboxylic acid because carboxylate ion is more stabilised by ...... than carboxylic acid.",
+      "answer": "more, resonance",
+      "category": "Chemistry"
+    },
+    {
+      "id": 3,
+      "question": "Sodium acetate on heating with ...... forms methane due to ...... reaction.",
+      "answer": "sodalime, decarboxylation",
+      "category": "Chemistry"
+    },
+    {
+      "id": 4,
+      "question": "Sodium acetate solution on ...... gives ethane and this reaction is known as ...... reaction.",
+      "answer": "electrolysis, Kolbe's electrolytic",
+      "category": "Chemistry"
+    },
+    {
+      "id": 5,
+      "question": "In HVZ reaction, the carboxylic acids are halogenated at ...... position by using halogens and ......",
+      "answer": "α, red phosphorus",
+      "category": "Chemistry"
+    },
+    {
+      "id": 6,
+      "question": "Formic acid gives ...... on reaction with sodium carbonate liberating ......",
+      "answer": "effervescence, CO₂",
+      "category": "Chemistry"
+    },
+    {
+      "id": 7,
+      "question": "Ammonium salts of carboxylic acids lose ...... molecule on heating with ...... and form ......",
+      "answer": "water, P₂O₅, amide",
+      "category": "Chemistry"
+    },
+    {
+      "id": 8,
+      "question": "Melting points of carboxylic acid with even number of carbon atoms is ...... than that of the acid with odd number of carbon atoms just below or above in the series. This is known as ...... effect.",
+      "answer": "higher, oscillation or alternation",
+      "category": "Chemistry"
+    },
+    {
+      "id": 9,
+      "question": "p-nitrobenzoic acid is ...... acid than m-nitro benzoic acid but ...... acid than that of o-nitrobenzoic acid.",
+      "answer": "stronger, weaker",
+      "category": "Chemistry"
+    },
+    {
+      "id": 10,
+      "question": "Carboxylic acids do not give ...... addition reactions unlike ...... compounds.",
+      "answer": "nucleophilic, carbonyl",
+      "category": "Chemistry"
+    },
+    {
+      "id": 11,
+      "question": "Aliphatic carboxylic acid gives ...... on reduction with red P and HI but gives ...... on reduction with LiAlH₄.",
+      "answer": "alkane, alcohol",
+      "category": "Chemistry"
+    },
+    {
+      "id": 12,
+      "question": "Acetic acid is dehydrated on heating with ...... to form ......",
+      "answer": "P₂O₅, acetic anhydride",
+      "category": "Chemistry"
+    },
+    {
+      "id": 13,
+      "question": "Benzoic acid is a ...... directing group and on nitration it gives ......",
+      "answer": "meta, meta nitrobenzoic acid",
+      "category": "Chemistry"
+    },
+    {
+      "id": 14,
+      "question": "Formic acid gives ...... ppt. of ...... with Fehling solution.",
+      "answer": "red, Cu₂O",
+      "category": "Chemistry"
+    },
+    {
+      "id": 15,
+      "question": "Oxalic acid on heating with glycerol at 110°C gives ......",
+      "answer": "formic acid",
+      "category": "Chemistry"
+    },
+    {
+      "id": 16,
+      "question": "Calcium acetate on heating gives ...... which gives ...... on heating with iodine and sodium hydroxide solution. (ISC 2017)",
+      "answer": "acetone, iodoform",
+      "category": "Chemistry"
+    }
+  ],
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "Which of the following is true about carboxylic acid strength?",
+      "options": [
+        "Higher Kₐ means stronger acid",
+        "Higher pKₐ means stronger acid", 
+        "Lower Kₐ means stronger acid",
+        "pKₐ has no relation to acid strength"
+      ],
+      "correctAnswer": "Higher Kₐ means stronger acid",
+      "category": "Chemistry"
+    },
+    {
+      "id": 2,
+      "question": "The carboxylate ion is more stable than carboxylic acid due to:",
+      "options": [
+        "Inductive effect",
+        "Resonance stabilization",
+        "Hyperconjugation",
+        "Steric hindrance"
+      ],
+      "correctAnswer": "Resonance stabilization",
+      "category": "Chemistry"
+    },
+    {
+      "id": 3,
+      "question": "Sodium acetate on heating with sodalime gives methane through:",
+      "options": [
+        "Decarboxylation reaction",
+        "Dehydration reaction",
+        "Hydrogenation reaction",
+        "Halogenation reaction"
+      ],
+      "correctAnswer": "Decarboxylation reaction",
+      "category": "Chemistry"
+    }
+  ]
+}
