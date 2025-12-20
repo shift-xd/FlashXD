@@ -1,0 +1,318 @@
+{
+  "deckName": "Semiconductors – Complete Physics Revision",
+  "flashcards": [
+    {
+      "id": 1,
+      "question": "What is a semiconductor?",
+      "answer": "A semiconductor is a material whose electrical conductivity lies between that of a conductor and an insulator.",
+      "category": "Basics",
+      "detailedExplanation": "Semiconductors are materials that do not conduct electricity as freely as metals but are not perfect insulators either. Their conductivity can be controlled by temperature, light, and impurity addition (doping). This controllable behavior makes them essential for electronic devices.\n\nAt low temperatures, semiconductors behave like insulators. As temperature increases, more charge carriers become available, increasing conductivity.",
+      "keyPoints": [
+        "Conductivity is intermediate",
+        "Behavior depends on temperature",
+        "Used in electronic devices",
+        "Conductivity can be controlled"
+      ],
+      "examples": [
+        "Silicon used in computer chips",
+        "Germanium used in early transistors"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Name some common semiconductor materials.",
+      "answer": "Silicon, Germanium, Gallium Arsenide, Indium Phosphide.",
+      "category": "Materials",
+      "detailedExplanation": "Elemental semiconductors like silicon and germanium are most commonly used. Compound semiconductors such as gallium arsenide are preferred in high-speed and optoelectronic applications due to their superior electron mobility.",
+      "keyPoints": [
+        "Silicon is most widely used",
+        "Germanium has higher mobility",
+        "Compound semiconductors used in LEDs and lasers"
+      ],
+      "examples": [
+        "GaAs in LEDs",
+        "Si in solar cells"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is an intrinsic semiconductor?",
+      "answer": "A pure semiconductor without any added impurities.",
+      "category": "Types",
+      "detailedExplanation": "Intrinsic semiconductors are chemically pure materials. The number of free electrons is equal to the number of holes. Their conductivity is low at room temperature but increases with rise in temperature.",
+      "keyPoints": [
+        "Pure material",
+        "Equal electrons and holes",
+        "Low conductivity"
+      ],
+      "examples": [
+        "Pure silicon crystal",
+        "Pure germanium crystal"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is an extrinsic semiconductor?",
+      "answer": "A semiconductor whose conductivity is increased by adding impurities.",
+      "category": "Types",
+      "detailedExplanation": "Extrinsic semiconductors are formed by doping intrinsic semiconductors with suitable impurities. Doping introduces additional charge carriers, significantly increasing conductivity.",
+      "keyPoints": [
+        "Impurities are added",
+        "Conductivity increases",
+        "Used in devices"
+      ],
+      "examples": [
+        "Phosphorus-doped silicon",
+        "Boron-doped silicon"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What is doping?",
+      "answer": "The process of adding impurities to a semiconductor to increase its conductivity.",
+      "category": "Doping",
+      "detailedExplanation": "Doping introduces controlled amounts of impurity atoms into a semiconductor crystal. These impurities either donate extra electrons or create holes, allowing precise control over electrical properties.",
+      "keyPoints": [
+        "Controlled impurity addition",
+        "Improves conductivity",
+        "Creates n-type or p-type material"
+      ],
+      "examples": [
+        "Adding phosphorus to silicon",
+        "Adding boron to silicon"
+      ]
+    },
+
+    {
+      "id": 6,
+      "question": "What is an n-type semiconductor?",
+      "answer": "A semiconductor doped with pentavalent impurities providing extra electrons.",
+      "category": "Doping",
+      "detailedExplanation": "In n-type semiconductors, donor atoms like phosphorus or arsenic contribute extra electrons. Electrons become majority carriers while holes are minority carriers.",
+      "keyPoints": [
+        "Pentavalent impurities",
+        "Electrons are majority carriers",
+        "High conductivity"
+      ],
+      "examples": [
+        "Phosphorus-doped silicon"
+      ]
+    },
+
+    {
+      "id": 7,
+      "question": "What is a p-type semiconductor?",
+      "answer": "A semiconductor doped with trivalent impurities creating holes.",
+      "category": "Doping",
+      "detailedExplanation": "Trivalent impurities like boron or aluminum create vacancies called holes. These holes act as positive charge carriers and dominate conduction.",
+      "keyPoints": [
+        "Trivalent impurities",
+        "Holes are majority carriers",
+        "Positive charge conduction"
+      ],
+      "examples": [
+        "Boron-doped silicon"
+      ]
+    },
+
+    {
+      "id": 8,
+      "question": "What are charge carriers in semiconductors?",
+      "answer": "Electrons and holes.",
+      "category": "Charge Transport",
+      "detailedExplanation": "Current in semiconductors is due to the movement of electrons in the conduction band and holes in the valence band. Both contribute to electrical conduction.",
+      "keyPoints": [
+        "Electrons carry negative charge",
+        "Holes behave like positive charges"
+      ],
+      "examples": [
+        "Electron flow in n-type",
+        "Hole flow in p-type"
+      ]
+    },
+
+    {
+      "id": 9,
+      "question": "What is a hole?",
+      "answer": "The absence of an electron in the valence band.",
+      "category": "Charge Transport",
+      "detailedExplanation": "When an electron leaves its position, it creates a vacancy. This vacancy behaves as a positively charged particle and moves opposite to electron flow.",
+      "keyPoints": [
+        "Acts as positive charge",
+        "Important for conduction"
+      ],
+      "examples": [
+        "Hole movement in p-type semiconductor"
+      ]
+    },
+
+    {
+      "id": 10,
+      "question": "What is a band gap?",
+      "answer": "The energy difference between the valence band and conduction band.",
+      "category": "Band Theory",
+      "detailedExplanation": "Semiconductors have a small band gap. When electrons gain sufficient energy, they jump to the conduction band and participate in current flow.",
+      "keyPoints": [
+        "Small energy gap",
+        "Allows controlled conduction"
+      ],
+      "examples": [
+        "Silicon band gap ~1.1 eV"
+      ]
+    },
+
+    {
+      "id": 11,
+      "question": "Why does conductivity increase with temperature in semiconductors?",
+      "answer": "More electrons gain energy to cross the band gap.",
+      "category": "Temperature Effect",
+      "detailedExplanation": "Rising temperature excites more electrons into the conduction band, increasing the number of charge carriers and hence conductivity.",
+      "keyPoints": [
+        "More charge carriers",
+        "Opposite behavior to metals"
+      ],
+      "examples": [
+        "Semiconductor devices heating up"
+      ]
+    },
+
+    {
+      "id": 12,
+      "question": "What is the valence band?",
+      "answer": "The energy band containing bound electrons.",
+      "category": "Band Theory",
+      "detailedExplanation": "Electrons in the valence band are involved in bonding and normally do not contribute to conduction unless excited.",
+      "keyPoints": [
+        "Lower energy band",
+        "Contains bonded electrons"
+      ],
+      "examples": [
+        "Electrons before excitation"
+      ]
+    },
+
+    {
+      "id": 13,
+      "question": "What is the conduction band?",
+      "answer": "The energy band where electrons are free to conduct electricity.",
+      "category": "Band Theory",
+      "detailedExplanation": "Electrons in this band move freely under an electric field, producing current.",
+      "keyPoints": [
+        "Higher energy band",
+        "Responsible for conduction"
+      ],
+      "examples": [
+        "Electron flow in circuits"
+      ]
+    },
+
+    {
+      "id": 14,
+      "question": "Why is silicon preferred over germanium?",
+      "answer": "It has better thermal stability and availability.",
+      "category": "Applications",
+      "detailedExplanation": "Silicon forms a stable oxide layer and can operate at higher temperatures, making it ideal for IC fabrication.",
+      "keyPoints": [
+        "High thermal stability",
+        "Abundant material"
+      ],
+      "examples": [
+        "Microprocessors"
+      ]
+    },
+
+    {
+      "id": 15,
+      "question": "What devices are made using semiconductors?",
+      "answer": "Diodes, transistors, ICs, solar cells.",
+      "category": "Applications",
+      "detailedExplanation": "Semiconductors form the foundation of modern electronics, enabling signal control, amplification, and energy conversion.",
+      "keyPoints": [
+        "Core of electronics",
+        "Used in energy and computing"
+      ],
+      "examples": [
+        "Mobile phones",
+        "Computers"
+      ]
+    }
+  ],
+
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "Which material is most commonly used as a semiconductor?",
+      "options": ["Copper", "Silicon", "Glass", "Rubber"],
+      "correctAnswer": "Silicon",
+      "category": "Basics"
+    },
+    {
+      "id": 2,
+      "question": "Which charge carrier dominates in n-type semiconductors?",
+      "options": ["Holes", "Protons", "Electrons", "Ions"],
+      "correctAnswer": "Electrons",
+      "category": "Doping"
+    },
+    {
+      "id": 3,
+      "question": "Which impurity creates p-type semiconductor?",
+      "options": ["Phosphorus", "Arsenic", "Boron", "Antimony"],
+      "correctAnswer": "Boron",
+      "category": "Doping"
+    },
+    {
+      "id": 4,
+      "question": "What happens to semiconductor conductivity with temperature?",
+      "options": ["Decreases", "Becomes zero", "Increases", "Remains constant"],
+      "correctAnswer": "Increases",
+      "category": "Temperature Effect"
+    },
+    {
+      "id": 5,
+      "question": "What is the energy gap in semiconductors?",
+      "options": ["Very large", "Zero", "Small", "Infinite"],
+      "correctAnswer": "Small",
+      "category": "Band Theory"
+    },
+
+    {
+      "id": 6,
+      "question": "Which device allows current to flow only in one direction?",
+      "options": ["Transistor", "Resistor", "Diode", "Capacitor"],
+      "correctAnswer": "Diode",
+      "category": "Applications"
+    },
+
+    {
+      "id": 7,
+      "question": "Which carriers are equal in intrinsic semiconductors?",
+      "options": ["Electrons and ions", "Holes and protons", "Electrons and holes", "Neutrons and electrons"],
+      "correctAnswer": "Electrons and holes",
+      "category": "Types"
+    },
+
+    {
+      "id": 8,
+      "question": "Which band is responsible for conduction?",
+      "options": ["Valence band", "Forbidden band", "Conduction band", "Atomic band"],
+      "correctAnswer": "Conduction band",
+      "category": "Band Theory"
+    },
+
+    {
+      "id": 9,
+      "question": "What type of impurity is phosphorus?",
+      "options": ["Trivalent", "Pentavalent", "Divalent", "Monovalent"],
+      "correctAnswer": "Pentavalent",
+      "category": "Doping"
+    },
+
+    {
+      "id": 10,
+      "question": "What is the role of holes?",
+      "options": ["Negative charge flow", "Positive charge flow", "No role", "Heat conduction"],
+      "correctAnswer": "Positive charge flow",
+      "category": "Charge Transport"
+    }
+  ]
+}
