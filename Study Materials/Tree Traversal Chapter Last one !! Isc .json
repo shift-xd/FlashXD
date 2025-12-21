@@ -1,0 +1,915 @@
+{
+  "deckName": "Trees, Binary Trees, and Traversals",
+  "flashcards": [
+    {
+      "id": 1,
+      "question": "What is a tree data structure?",
+      "answer": "A tree is a non-linear, hierarchy-based data structure consisting of nodes connected by edges, starting from a single root node, with all other nodes arranged in parent–child relationships.",
+      "category": "Tree Basics",
+      "detailedExplanation": "A tree is a collection of nodes connected by edges in a hierarchical (parent–child) relationship. Unlike linear structures such as arrays or linked lists (where elements are arranged sequentially), trees are non-linear: a node can branch out to multiple children.\n\nKey properties:\n- There is exactly one special topmost node called the root.\n- Every node (except the root) has exactly one parent.\n- Nodes can have zero or more children (depending on the type of tree).\n- Edges represent the connections (links) between nodes.\n\nTrees are widely used to represent hierarchical data such as file systems, organization charts, and various kinds of search structures.",
+      "keyPoints": [
+        "Tree is a non-linear data structure.",
+        "Nodes are connected in a hierarchical parent–child manner.",
+        "There is exactly one root node.",
+        "Edges connect nodes and form paths."
+      ],
+      "examples": [
+        "A file system where folders contain subfolders and files can be represented as a tree.",
+        "An organization chart where the CEO is at the top and employees form different levels below is a tree."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What is a node in a tree?",
+      "answer": "A node is a basic unit of a tree data structure where data is stored.",
+      "category": "Tree Basics",
+      "detailedExplanation": "A node represents a single element in a tree. Each node typically contains:\n- A data field (the value or record stored at that position), and\n- One or more references (links/pointers) to its child nodes.\n\nDepending on the type of tree, a node may have specific limits on how many children it can have. For example, in a binary tree, a node can have at most two children (left and right).",
+      "keyPoints": [
+        "Node is the basic storage unit in a tree.",
+        "Each node stores data and links to its children.",
+        "The root, internal, and leaf nodes are all nodes with different roles."
+      ],
+      "examples": [
+        "In a binary tree storing integers, each node might hold an integer value and pointers to left and right children.",
+        "In an expression tree, each node might store an operator or operand."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is an edge in a tree?",
+      "answer": "An edge is a connection or path between two nodes in a tree.",
+      "category": "Tree Basics",
+      "detailedExplanation": "An edge represents the link between a parent node and a child node. It is the line or pointer that connects two nodes.\n\nIn terms of structure:\n- Every connection from a parent to a child is one edge.\n- The number of edges on a path is one less than the number of nodes on that path.\n- Edges are used to define distances such as depth and height (measured as counts of edges).",
+      "keyPoints": [
+        "Edges connect parent and child nodes.",
+        "Edges are used to measure distances like depth and height.",
+        "The number of edges in a path is nodes_in_path − 1."
+      ],
+      "examples": [
+        "If node A is connected to node B, there is an edge between A and B.",
+        "A path A → B → C has 3 nodes but 2 edges."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is the root node of a tree and what are its special properties?",
+      "answer": "The root node is the topmost node of the tree. It has no parent, has depth 0 and level 0, and can never be the successor of any node.",
+      "category": "Tree Basics",
+      "detailedExplanation": "The root node is the entry point of the tree structure:\n- It is at the top of the hierarchy.\n- It does not have any parent node.\n- Its depth is defined as 0 because there are zero edges from the root to itself.\n- Its level is also defined as 0 (the first level of the tree).\n- Because it has no parent, it can never be a successor of any other node.\n\nAll other nodes in the tree are reachable from the root by following edges.",
+      "keyPoints": [
+        "Topmost node of the tree is called the root.",
+        "Root has no parent; it is not a successor of any node.",
+        "Depth(root) = 0 and Level(root) = 0.",
+        "All other nodes are descendants of the root."
+      ],
+      "examples": [
+        "In a tree where A is at the top and all other nodes are below it, A is the root.",
+        "In the example binary tree with nodes A, B, C, ..., A is given as the root node."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What is a parent node in a tree?",
+      "answer": "A parent node is a node from which one or more child nodes originate.",
+      "category": "Tree Basics",
+      "detailedExplanation": "A parent node is any node that has at least one child. The connection from a parent to its child(ren) is represented by edges.\n\nProperties:\n- Every node except the root has exactly one parent.\n- A parent can have one or more children depending on the type of tree (up to two in a binary tree).\n- The relationship is directional: a parent node points downward to its children.\n\nIn a binary tree, a parent may specifically have a left child, a right child, or both.",
+      "keyPoints": [
+        "A parent node has one or more children.",
+        "Every non-root node has exactly one parent.",
+        "Parent–child relationships define the tree hierarchy."
+      ],
+      "examples": [
+        "If B and C are directly below A and connected to it, then A is the parent of B and C.",
+        "In the given example, B is the parent of C and D."
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What is a child node in a tree?",
+      "answer": "A child node is a node that directly descends from another node and has a reference to its parent.",
+      "category": "Tree Basics",
+      "detailedExplanation": "A child node is connected to its parent by a single edge. It is a direct descendant of that parent.\n\nProperties:\n- A node can be a child of exactly one parent.\n- A node can be both a child (of its parent) and a parent (of its own children) at the same time.\n- Children branching from the same parent are called siblings.",
+      "keyPoints": [
+        "A child has exactly one parent node.",
+        "A node can be both a child and a parent.",
+        "Children of the same parent are siblings."
+      ],
+      "examples": [
+        "C and D are children of parent node B.",
+        "If K has children L and M, then L and M are child nodes of K."
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What are sibling nodes in a tree?",
+      "answer": "Sibling nodes are nodes that share the same parent.",
+      "category": "Tree Basics",
+      "detailedExplanation": "Siblings are a set of nodes that originate from the same parent node. They are at the same level and are directly connected to the same parent.\n\nThis relationship is important for traversals and for understanding the structure of a tree. Siblings do not have a direct parent–child relationship among themselves; they are peers.",
+      "keyPoints": [
+        "Siblings share a common parent.",
+        "Siblings lie on the same level in the tree.",
+        "They are not ancestors or descendants of each other."
+      ],
+      "examples": [
+        "If B has children C and D, then C and D are siblings.",
+        "In the text, pairs like B and K, C and D, L and M, F and G are mentioned as siblings."
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What is a leaf node (also called an external node) in a tree?",
+      "answer": "A leaf node, or external node, is a node that has no child nodes.",
+      "category": "Tree Basics",
+      "detailedExplanation": "Leaf nodes are the terminating points of branches in a tree. They do not have any children, so there are no outgoing edges from them to further nodes.\n\nBecause they are endpoints, they are crucial when computing heights and determining the longest paths in the tree. All external nodes are leaf nodes, and all leaf nodes are external nodes in the context of this text.",
+      "keyPoints": [
+        "Leaf nodes have no children.",
+        "Leaf nodes are also called external nodes.",
+        "Paths from the root often end at leaf nodes when computing height."
+      ],
+      "examples": [
+        "In a binary tree representing a decision process, the final decision outcomes are at leaf nodes.",
+        "All nodes in the last level of a perfect binary tree are leaf nodes."
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What are internal nodes in a tree?",
+      "answer": "Internal nodes are all nodes in a tree that are not leaf nodes.",
+      "category": "Tree Basics",
+      "detailedExplanation": "An internal node is any node that has at least one child. These nodes lie somewhere between the root and the leaves.\n\nThey are also sometimes called non-terminal nodes since the paths from the root continue through them to reach leaves.",
+      "keyPoints": [
+        "Internal nodes have one or more children.",
+        "All nodes except leaf nodes are internal nodes.",
+        "The root is internal if it has at least one child."
+      ],
+      "examples": [
+        "In a binary tree with root A and children under it, A is an internal node if it has children.",
+        "Any node that has either a left or right child in a binary tree is an internal node."
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What is a subtree in a tree data structure?",
+      "answer": "A subtree is a portion of a tree consisting of a node and all its descendants, which itself forms a tree.",
+      "category": "Tree Basics",
+      "detailedExplanation": "Every node in a tree can be viewed as the root of its own subtree. A subtree includes that node and all nodes reachable from it by following child links.\n\nProperties:\n- Each subtree is itself a valid tree with its own root (the chosen node).\n- A tree may have many subtrees, one for each node.\n\nThis concept is essential for recursive definitions and recursive algorithms on trees.",
+      "keyPoints": [
+        "A subtree is formed by a node and all its descendants.",
+        "Every node can be considered the root of a subtree.",
+        "Subtrees are used heavily in recursive tree algorithms."
+      ],
+      "examples": [
+        "If B is a child of A, then the structure rooted at B (including its children and grandchildren) is a subtree.",
+        "Deleting a subtree rooted at a node removes that node and all its descendants."
+      ]
+    },
+    {
+      "id": 11,
+      "question": "What is the degree of a node in a tree?",
+      "answer": "The degree of a node is the number of children it has.",
+      "category": "Tree Measures",
+      "detailedExplanation": "The degree of a node simply counts how many immediate child nodes it directly points to.\n\nIn general trees, nodes can have any non-negative number of children. In binary trees, the degree of any node is at most 2 (0, 1, or 2 children).",
+      "keyPoints": [
+        "Degree(node) = number of its children.",
+        "In binary trees, degree(node) ∈ {0, 1, 2}.",
+        "Leaf nodes have degree 0."
+      ],
+      "examples": [
+        "If node B has children C and D, then the degree of B is 2.",
+        "If a node has no children, its degree is 0."
+      ]
+    },
+    {
+      "id": 12,
+      "question": "What is the degree of a tree?",
+      "answer": "The degree of a tree is the maximum degree among all its nodes.",
+      "category": "Tree Measures",
+      "detailedExplanation": "To find the degree of a tree, compute the degree (number of children) of each node, then take the maximum of those values.\n\nFormally:\nDegree(tree) = max{ degree(v) | v is a node in the tree }.\n\nIn the provided example tree with nodes A, B, D, K, C, E, G, M, N, L, F, H, P, the maximum number of children any node has is 2, so the degree of that tree is 2.",
+      "keyPoints": [
+        "Degree(tree) is based on the node with the most children.",
+        "In a binary tree, the degree of the tree is at most 2.",
+        "The example tree has degree(tree) = 2."
+      ],
+      "examples": [
+        "If the highest-degree node in a tree has 3 children, then the tree’s degree is 3.",
+        "In the given binary tree example, Degree of Tree = 2."
+      ]
+    },
+    {
+      "id": 13,
+      "question": "What is the depth of a node in a tree?",
+      "answer": "The depth of a node is the number of edges from the root node to that node.",
+      "category": "Tree Measures",
+      "detailedExplanation": "Depth measures how far a node is from the root, counted in edges.\n\nProperties:\n- The root node has depth 0 because there are zero edges from root to root.\n- If a node is a direct child of the root, its depth is 1.\n- In general, depth(child) = depth(parent) + 1.\n\nIn the example, the depth of node M is 2, meaning there are 2 edges on the path from the root to M.",
+      "keyPoints": [
+        "Depth(root) = 0.",
+        "Depth is measured in edges, not nodes.",
+        "Depth(child) = depth(parent) + 1."
+      ],
+      "examples": [
+        "If the path from root A to node M is A → B → M, the depth of M is 2.",
+        "A node at the third level (if levels start at 0) has depth 2."
+      ]
+    },
+    {
+      "id": 14,
+      "question": "What is the depth of a tree?",
+      "answer": "The depth of a tree is the number of edges in the longest path from the root node to any leaf node.",
+      "category": "Tree Measures",
+      "detailedExplanation": "Depth of a tree describes how deep the tree extends from the root to its farthest leaf, counted in edges.\n\nTo compute it:\n1. Find all root-to-leaf paths.\n2. Count the edges in each path.\n3. Take the maximum of those counts.\n\nIn the example binary tree, the longest path from the root to a leaf contains 4 edges, so the depth of the tree is 4.",
+      "keyPoints": [
+        "Tree depth is based on the longest root-to-leaf path.",
+        "It is measured as the number of edges.",
+        "In the example tree, depth(tree) = 4."
+      ],
+      "examples": [
+        "If the longest path from root to any leaf is A → B → D → G → K (4 edges), then tree depth is 4.",
+        "In the given binary tree, the depth and height are both 4 by edge count."
+      ]
+    },
+    {
+      "id": 15,
+      "question": "What is the height of a node in a tree?",
+      "answer": "The height of a node is the number of edges in the longest path from that node down to any leaf node.",
+      "category": "Tree Measures",
+      "detailedExplanation": "While depth is measured from the root downward, height of a node is measured from that node downward to the furthest leaf.\n\nFormally:\nHeight(v) = max number of edges on any path from v to a leaf.\n\nIn the example, the height of node B is 3, meaning the longest path from B to any leaf contains 3 edges.",
+      "keyPoints": [
+        "Height measures distance from a node down to leaves.",
+        "Height is counted in edges.",
+        "In the example, height(B) = 3."
+      ],
+      "examples": [
+        "If the longest downward path from node B is B → C → E → H (3 edges), then height(B) = 3.",
+        "Leaf nodes have height 0 because there are no edges below them."
+      ]
+    },
+    {
+      "id": 16,
+      "question": "What is the height of a tree?",
+      "answer": "The height of a tree is the height of its root node, equal to the number of edges in the longest path from the root to any leaf.",
+      "category": "Tree Measures",
+      "detailedExplanation": "Height of a tree is another way of describing how tall the tree is. It is equivalent (in this context) to the depth of the deepest leaf.\n\nFormally:\nHeight(tree) = Height(root) = max number of edges from root to any leaf.\n\nIn the example binary tree, there are 4 edges on the longest root-to-leaf path, so the height of the tree is 4.",
+      "keyPoints": [
+        "Height(tree) = height(root).",
+        "Height(tree) equals depth of the deepest node.",
+        "In the example tree, height(tree) = 4."
+      ],
+      "examples": [
+        "If the deepest leaf of a tree is at depth 5, then the height of the tree is 5.",
+        "In the given binary tree, several root-to-leaf paths have 4 edges, hence height = 4."
+      ]
+    },
+    {
+      "id": 17,
+      "question": "What is the level of a node in a tree, and how is it related to depth?",
+      "answer": "The level of a node is its distance from the root measured as steps from top to bottom, usually starting at 0. In this text, level and depth of a node are effectively the same, with the root at level 0.",
+      "category": "Tree Measures",
+      "detailedExplanation": "Level and depth are closely related concepts:\n- The level of the root is 0.\n- Nodes directly below the root are at level 1.\n- In general, level(node) = depth(node) when counting from 0.\n\nThe level of the tree is the highest level number present, which equals the depth/height (by edges) in the given example. In the example tree, the deepest nodes are at level 4.",
+      "keyPoints": [
+        "Level(root) = 0.",
+        "Level increases by 1 as you move down each step.",
+        "Maximum level in the tree equals its height (in the given text)."
+      ],
+      "examples": [
+        "If node M is 2 edges below the root, it is at level 2.",
+        "In the example tree, levels run from 0 to 4."
+      ]
+    },
+    {
+      "id": 18,
+      "question": "What is the size of a tree?",
+      "answer": "The size of a tree is the total number of nodes it contains.",
+      "category": "Tree Measures",
+      "detailedExplanation": "Size is a simple count of how many nodes are present in the tree, regardless of their position or role.\n\nIn the provided binary tree example, there are 14 nodes in total, so the size of that tree is 14.",
+      "keyPoints": [
+        "Size(tree) = number of nodes in the tree.",
+        "Size does not depend on shape or height.",
+        "In the example binary tree, size = 14."
+      ],
+      "examples": [
+        "If a tree has nodes labeled A through N (14 labels), then its size is 14.",
+        "An empty tree (if allowed) has size 0."
+      ]
+    },
+    {
+      "id": 19,
+      "question": "What is a binary tree?",
+      "answer": "A binary tree is a tree data structure in which each node has at most two children, typically referred to as the left child and the right child.",
+      "category": "Binary Tree Basics",
+      "detailedExplanation": "In a binary tree, every node can have:\n- No children (leaf node),\n- Exactly one child (either left or right), or\n- Exactly two children (left and right).\n\nEach node stores data and references to its left and right children (which may be NULL if absent). There is a single root node at the top.\n\nThe example binary tree in the text includes nodes A (root), B, D, K, C, E, G, M, N, L, F, H, P organized with left and right references.",
+      "keyPoints": [
+        "Each node has at most two children.",
+        "Children are usually designated as left and right.",
+        "Binary trees are the basis for many important structures such as binary search trees and heaps."
+      ],
+      "examples": [
+        "A binary tree representing arithmetic expressions uses left and right subtrees to represent operands.",
+        "The example tree with root A and 13 other nodes is a binary tree with degree(tree) = 2."
+      ]
+    },
+    {
+      "id": 20,
+      "question": "What are the key features of a binary tree as described in the text?",
+      "answer": "A binary tree has exactly one root node, each node has at most two child nodes, each node has exactly one parent (except the root), and a predecessor can never be a child of its successor and vice versa.",
+      "category": "Binary Tree Basics",
+      "detailedExplanation": "The text highlights several important features:\n1. There is exactly one root node.\n2. Every node can have at most two children (left and right).\n3. Every non-root node has exactly one parent.\n4. A predecessor node (parent/ancestor) can never be a child node of its successor, and a successor (child/descendant) can never be the parent of its ancestor.\n\nThese properties ensure the structure remains a proper hierarchy without cycles.",
+      "keyPoints": [
+        "Single root node.",
+        "At most two children per node.",
+        "Exactly one parent for each non-root node.",
+        "No cycles: predecessors and successors cannot be each other's children."
+      ],
+      "examples": [
+        "In the sample binary tree, A is the only root; all other nodes have exactly one parent.",
+        "Node B is a predecessor of C, and C is a successor of B; B can never be a child of C."
+      ]
+    },
+    {
+      "id": 21,
+      "question": "What is a predecessor in a tree?",
+      "answer": "A predecessor is a parent (or ancestor) node relative to another node.",
+      "category": "Binary Tree Terminology",
+      "detailedExplanation": "In the context given:\n- The direct predecessor of a node is its parent.\n- More generally, any ancestor node (parent, grandparent, etc.) can be considered a predecessor.\n\nThe text states that a predecessor node can never be a child of its successor, emphasizing that parent–child relationships are one-directional and acyclic.",
+      "keyPoints": [
+        "Predecessor refers to a parent or ancestor node.",
+        "Predecessor is above the given node in the tree.",
+        "A predecessor cannot be a child of its successor."
+      ],
+      "examples": [
+        "If B is the parent of C, then B is the predecessor of C.",
+        "Node K is a predecessor of L if L is a descendant of K."
+      ]
+    },
+    {
+      "id": 22,
+      "question": "What is a successor in a tree?",
+      "answer": "A successor is a child (or descendant) node relative to another node.",
+      "category": "Binary Tree Terminology",
+      "detailedExplanation": "In the provided text:\n- The direct successor of a node is its child.\n- More generally, any descendant node (child, grandchild, etc.) may be considered a successor.\n\nThe successor is always below the given node in the tree. The text states that a successor node can never be a parent of its predecessor.",
+      "keyPoints": [
+        "Successor refers to a child or descendant node.",
+        "Successor is below the given node in the hierarchy.",
+        "A successor cannot be the parent of its predecessor."
+      ],
+      "examples": [
+        "If C is a child of B, then C is a successor of B.",
+        "If L is a descendant of K, L is a successor of K."
+      ]
+    },
+    {
+      "id": 23,
+      "question": "What is a full binary tree?",
+      "answer": "A full binary tree is a binary tree in which every internal (non-leaf) node has either exactly two children or no children at all.",
+      "category": "Types of Binary Trees",
+      "detailedExplanation": "In a full binary tree:\n- Every internal node has exactly two children.\n- Leaf nodes have zero children.\n\nThere are no nodes with only one child. This structure imposes a strong constraint on the shape of the tree, which is often useful in theoretical analysis.",
+      "keyPoints": [
+        "Every internal node has exactly two children.",
+        "No node has only one child.",
+        "Leaves have zero children."
+      ],
+      "examples": [
+        "A perfectly balanced binary tree where every internal node has two children is a full binary tree.",
+        "If a node in a binary tree has only a left child and no right child, that tree is not full."
+      ]
+    },
+    {
+      "id": 24,
+      "question": "What is a perfect binary tree?",
+      "answer": "A perfect binary tree is a binary tree in which every internal node has exactly two children and all leaf nodes are at the same level.",
+      "category": "Types of Binary Trees",
+      "detailedExplanation": "A perfect binary tree has two conditions:\n1. Every internal node has exactly two children.\n2. All leaf nodes lie on the same level (same distance from the root).\n\nThis means the tree is completely filled and perfectly balanced in terms of levels. It is both full and strictly level-balanced.",
+      "keyPoints": [
+        "Every internal node has exactly two children.",
+        "All leaves are at the same level.",
+        "Perfect binary trees are always full and complete."
+      ],
+      "examples": [
+        "A tree with 1 node at level 0, 2 at level 1, 4 at level 2, and 8 leaves at level 3 is a perfect binary tree.",
+        "A full binary tree whose last level is completely filled is perfect."
+      ]
+    },
+    {
+      "id": 25,
+      "question": "What is a complete binary tree?",
+      "answer": "A complete binary tree is a binary tree in which all levels are completely filled except possibly the last level, and the last level is filled from left to right without gaps.",
+      "category": "Types of Binary Trees",
+      "detailedExplanation": "In a complete binary tree:\n- Every level except perhaps the last is fully filled.\n- In the last level, nodes occupy the leftmost positions first; there are no missing nodes before a present node on that level.\n\nThis concept is important for array-based implementations of binary trees such as heaps.",
+      "keyPoints": [
+        "All levels except the last are fully filled.",
+        "The last level is filled from left to right.",
+        "Complete binary trees allow efficient array representations."
+      ],
+      "examples": [
+        "A binary heap used in priority queues is stored as a complete binary tree.",
+        "If the last level has nodes in positions 0, 1, and 3 (missing position 2), the tree is not complete."
+      ]
+    },
+    {
+      "id": 26,
+      "question": "What types of trees are mentioned as part of the syllabus in the text?",
+      "answer": "The text mentions Binary Trees and Binary Search Trees (referred to as 'Binary Searched Tree') as part of the syllabus.",
+      "category": "Tree Basics",
+      "detailedExplanation": "The text briefly states that trees can be classified based on the number of links or order of stored data and that within the syllabus, two specific types are focused on:\n- Binary Tree: A tree with at most two children per node.\n- Binary Search Tree (BST): A special type of binary tree (details not elaborated in the provided text) where nodes are usually arranged in a sorted manner to allow efficient searching.",
+      "keyPoints": [
+        "Binary trees and binary search trees are explicitly mentioned.",
+        "The term 'Binary Searched Tree' is likely a typo for 'Binary Search Tree'.",
+        "Detailed BST properties are not expanded in the given excerpt."
+      ],
+      "examples": [
+        "A generic binary tree does not necessarily store data in sorted order.",
+        "A binary search tree allows operations like search, insert, and delete in O(log n) average time (general knowledge, not detailed in text)."
+      ]
+    },
+    {
+      "id": 27,
+      "question": "What is meant by traversing a doubly linked list in the context of the text?",
+      "answer": "Traversing a doubly linked list means moving through each node of the list from the beginning to the end to process its data.",
+      "category": "Linked List",
+      "detailedExplanation": "The text defines traversal as visiting each element (node) of the doubly linked list in sequence for processing (such as reading, printing, or modifying data).\n\nBasic idea:\n- Start from the first node (Start pointer).\n- Move node by node using the 'right' link (or next pointer).\n- Process the data at each node until the last node is reached.\n\nThis concept is mentioned because doubly linked lists are often used to implement dynamic tree structures.",
+      "keyPoints": [
+        "Traversal processes nodes from the first to the last.",
+        "Use the right (next) link to move forward.",
+        "Each node’s data is processed during traversal."
+      ],
+      "examples": [
+        "Printing all elements in a doubly linked list from head to tail is a traversal.",
+        "Converting a doubly linked list into a tree might require traversing the list first."
+      ]
+    },
+    {
+      "id": 28,
+      "question": "What is the algorithm given for traversing a doubly linked list from start to end?",
+      "answer": "Initialize a temporary pointer Ptr to Start, then repeatedly process Ptr→data and move Ptr to Ptr→right until Ptr becomes NULL.",
+      "category": "Linked List",
+      "detailedExplanation": "The given algorithm uses two variables: Start (the address of the first node) and Ptr (a temporary pointer).\n\nSteps:\n1. Initialize Ptr = Start.\n2. While Ptr ≠ NULL:\n   - Process Ptr→data.\n   - Move Ptr to Ptr→right (the next node).\n3. When Ptr becomes NULL, traversal ends and you return.\n\nAn additional note mentions withdrawing temporary pointers by setting Ptr = NULL and possibly Ptr1 = NULL before returning, which is more about cleanup.",
+      "keyPoints": [
+        "Use Ptr as a temporary pointer to traverse.",
+        "Loop while Ptr is not NULL.",
+        "At each step, process data and move to the right link."
+      ],
+      "examples": [
+        "To display all values in the list, you would print Ptr→data at each step of the loop.",
+        "This same pattern (init pointer, loop until NULL) is common for linear structures like singly and doubly linked lists."
+      ]
+    },
+    {
+      "id": 29,
+      "question": "How are doubly linked lists related to binary trees in the text?",
+      "answer": "The text notes that doubly linked lists are used in creating binary trees, suggesting linked structures are used to implement nodes with multiple links.",
+      "category": "Implementation",
+      "detailedExplanation": "Although details are not fully expanded, the text mentions: \"Double linked list is used in creating Binary Tree.\" This refers to the idea that binary tree nodes are often implemented as dynamically allocated records containing data and multiple pointers (e.g., left and right), conceptually similar to a doubly linked list node that has links in multiple directions.\n\nThus, understanding how to traverse and manipulate linked lists helps in understanding how trees are implemented and traversed.",
+      "keyPoints": [
+        "Doubly linked list concepts carry over to pointer-based tree implementations.",
+        "Both structures rely on nodes connected by pointers.",
+        "Tree traversal algorithms often mimic pointer movement patterns learned from linked lists."
+      ],
+      "examples": [
+        "A binary tree node structure in C might have pointers left and right, similar to a doubly linked list node with prev and next.",
+        "Converting between linear and hierarchical structures is easier when one understands linked lists."
+      ]
+    },
+    {
+      "id": 30,
+      "question": "What is tree traversal?",
+      "answer": "Tree traversal is the process of visiting (processing) all the nodes of a tree in some specific order until all nodes have been processed.",
+      "category": "Tree Traversal Basics",
+      "detailedExplanation": "Traversal ensures every node in the tree is visited exactly once (or as required) according to a defined order. Unlike linear lists, there is no single natural order in a tree, so several standard traversal strategies are defined.\n\nThe text focuses on three fundamental depth-first traversal orders for binary trees:\n- Preorder (Root → Left → Right),\n- Inorder (Left → Root → Right),\n- Postorder (Left → Right → Root).",
+      "keyPoints": [
+        "Traversal systematically visits each node of the tree.",
+        "Different traversal orders exist because trees are hierarchical.",
+        "Preorder, Inorder, and Postorder are standard depth-first traversals."
+      ],
+      "examples": [
+        "Printing all node values in a binary tree according to inorder traversal is an example of traversal.",
+        "Evaluating an expression tree often uses postorder traversal."
+      ]
+    },
+    {
+      "id": 31,
+      "question": "What is preorder traversal of a binary tree and what is its visiting order?",
+      "answer": "Preorder traversal visits nodes in the order: Root, then Left subtree, then Right subtree (Root → Left → Right).",
+      "category": "Tree Traversal",
+      "detailedExplanation": "In preorder traversal, at each node you perform the following steps:\n1. Visit (process) the current node (root of the subtree).\n2. Recursively traverse the left subtree in preorder.\n3. Recursively traverse the right subtree in preorder.\n\nThe text gives an example where the preorder traversal of a certain binary tree yields the sequence: 1-2-4-3-5-7-8-6.\n\nThis traversal is often used to create prefix expressions or to copy a tree.",
+      "keyPoints": [
+        "Visiting order: Root → Left → Right.",
+        "Process node before its subtrees.",
+        "Example output: 1-2-4-3-5-7-8-6 (from the given tree)."
+      ],
+      "examples": [
+        "For a small tree with root A, left child B, and right child C, preorder is A, B, C.",
+        "On the example tree in the text, preorder is 1-2-4-3-5-7-8-6."
+      ]
+    },
+    {
+      "id": 32,
+      "question": "What is inorder traversal of a binary tree and what is its visiting order?",
+      "answer": "Inorder traversal visits nodes in the order: Left subtree, then Root, then Right subtree (Left → Root → Right).",
+      "category": "Tree Traversal",
+      "detailedExplanation": "In inorder traversal, at each node you perform the following steps:\n1. Recursively traverse the left subtree in inorder.\n2. Visit (process) the current node.\n3. Recursively traverse the right subtree in inorder.\n\nFor the given example tree, the inorder traversal sequence is: 4-2-1-7-5-8-3-6.\n\nIn binary search trees, inorder traversal is particularly important because it visits nodes in sorted (non-decreasing) order of their keys.",
+      "keyPoints": [
+        "Visiting order: Left → Root → Right.",
+        "Process node between traversing its left and right subtrees.",
+        "Example output: 4-2-1-7-5-8-3-6 (from the given tree)."
+      ],
+      "examples": [
+        "For a tree with root A, left child B, right child C, inorder is B, A, C.",
+        "On the example tree in the text, inorder is 4-2-1-7-5-8-3-6."
+      ]
+    },
+    {
+      "id": 33,
+      "question": "What is postorder traversal of a binary tree and what is its visiting order?",
+      "answer": "Postorder traversal visits nodes in the order: Left subtree, then Right subtree, then Root (Left → Right → Root).",
+      "category": "Tree Traversal",
+      "detailedExplanation": "In postorder traversal, at each node you perform these steps:\n1. Recursively traverse the left subtree in postorder.\n2. Recursively traverse the right subtree in postorder.\n3. Visit (process) the current node.\n\nThe text gives the example sequence for a particular tree: 4-2-7-8-5-6-3-1.\n\nPostorder traversal is particularly useful when deleting trees or evaluating expression trees, because it processes children before their parent.",
+      "keyPoints": [
+        "Visiting order: Left → Right → Root.",
+        "Process node after its subtrees.",
+        "Example output: 4-2-7-8-5-6-3-1 (from the given tree)."
+      ],
+      "examples": [
+        "For a tree with root A, left child B, right child C, postorder is B, C, A.",
+        "On the example tree in the text, postorder is 4-2-7-8-5-6-3-1."
+      ]
+    },
+    {
+      "id": 34,
+      "question": "What are the example traversal sequences (preorder, inorder, postorder) given in the text for the sample tree?",
+      "answer": "Preorder: 1-2-4-3-5-7-8-6; Inorder: 4-2-1-7-5-8-3-6; Postorder: 4-2-7-8-5-6-3-1.",
+      "category": "Tree Traversal",
+      "detailedExplanation": "The text provides specific example sequences for a certain binary tree (with root labeled 1 and other nodes labeled 2 to 8):\n- Preorder (Root → Left → Right): 1-2-4-3-5-7-8-6\n- Inorder (Left → Root → Right): 4-2-1-7-5-8-3-6\n- Postorder (Left → Right → Root): 4-2-7-8-5-6-3-1\n\nThese sequences illustrate how the same tree can produce different node visit orders depending on the traversal method used.",
+      "keyPoints": [
+        "Each traversal yields a different sequence over the same tree.",
+        "Preorder begins with the root (1).",
+        "Postorder ends with the root (1)."
+      ],
+      "examples": [
+        "If given the tree structure, you can verify that all three sequences are consistent with their respective orders.",
+        "In practical problems, you might be given preorder and inorder to reconstruct the tree."
+      ]
+    },
+    {
+      "id": 35,
+      "question": "How does the non-recursive preorder traversal using a stack work according to the text?",
+      "answer": "It uses a TEMP pointer for the current node and a stack (ST) to store right child addresses. TEMP starts at ROOT, and the algorithm scans down the leftmost path, pushing right children onto the stack and visiting each node, then backtracks by popping from the stack.",
+      "category": "Traversal Algorithms",
+      "detailedExplanation": "The non-recursive preorder algorithm described uses explicit stack management instead of recursion.\n\nOutline:\n1. Use TEMP as the current node pointer.\n2. Use an array ST as a stack and SP as the stack pointer.\n3. Initialize: SP = 1, ST[SP] = NULL, TEMP = ROOT.\n4. While TEMP ≠ NULL:\n   - Visit (Display) TEMP→DATA (preorder: process root first).\n   - If TEMP→RIGHT ≠ NULL:\n     - SP = SP + 1.\n     - ST[SP] = TEMP→RIGHT (push right child).\n   - If TEMP→LEFT ≠ NULL:\n     - TEMP = TEMP→LEFT (move to left child).\n   - Else:\n     - TEMP = ST[SP] (pop from stack into TEMP).\n     - SP = SP − 1.\n\nThis effectively mimics the recursive preorder pattern: process node, then left subtree, then right subtree, using a stack to remember pending right subtrees.",
+      "keyPoints": [
+        "Uses TEMP for current node and ST as a stack.",
+        "Pushes right children so left subtree is processed first.",
+        "Preorder order is maintained: Root → Left → Right."
+      ],
+      "examples": [
+        "On the example tree, applying this algorithm will output 1-2-4-3-5-7-8-6 in preorder.",
+        "If a node has no left child, TEMP is taken from the top of the stack (next right subtree)."
+      ]
+    },
+    {
+      "id": 36,
+      "question": "Summarize the high-level steps of the non-recursive preorder traversal algorithm provided.",
+      "answer": "Initialize TEMP to ROOT and push NULL to stack; repeatedly visit TEMP, push its right child if it exists, then move to its left child if present; if no left child, pop the next node from the stack into TEMP; repeat until TEMP is NULL and stack is empty.",
+      "category": "Traversal Algorithms",
+      "detailedExplanation": "High-level steps:\n1. Set TEMP = ROOT; initialize stack ST with a NULL marker at the bottom; SP points to this NULL.\n2. While TEMP is not NULL:\n   - Visit TEMP (process its DATA).\n   - If TEMP has a right child, push it onto the stack.\n   - If TEMP has a left child, move TEMP to that left child.\n   - Otherwise (no left child): pop from the stack and assign to TEMP; decrement SP.\n3. Terminate when TEMP is NULL and the stack contains only the NULL marker that has been popped.\n\nThis procedure ensures all nodes are visited in preorder without using recursion.",
+      "keyPoints": [
+        "Stack tracks right subtrees that are yet to be processed.",
+        "Left subtrees are always processed immediately after a node.",
+        "The algorithm stops when both TEMP and the stack are empty."
+      ],
+      "examples": [
+        "On a skewed tree where every node has only a left child, the stack will rarely be used because there are no right children to push.",
+        "On a balanced tree, the stack will store right children of nodes along the visited left paths."
+      ]
+    },
+    {
+      "id": 37,
+      "question": "How does the non-recursive inorder traversal using a stack work according to the text?",
+      "answer": "It repeatedly pushes nodes along the leftmost path from the current TEMP node onto a stack, then pops nodes to visit them, and when a popped node has a right child, it moves to that right subtree and repeats.",
+      "category": "Traversal Algorithms",
+      "detailedExplanation": "The text describes the standard stack-based inorder traversal:\n\n1. Use TEMP as the current node and ST as a stack of nodes; SP is the stack pointer.\n2. Initialize: SP = 1, ST[SP] = NULL, TEMP = ROOT.\n3. While TEMP ≠ NULL:\n   - SP = SP + 1.\n   - ST[SP] = TEMP (push TEMP).\n   - TEMP = TEMP→LEFT (go as far left as possible).\n4. When TEMP becomes NULL, start popping:\n   - Pop a node from ST into TEMP (TEMP = ST[SP]; SP = SP − 1).\n   - Visit (Display) TEMP→DATA.\n   - If TEMP→RIGHT ≠ NULL, set TEMP = TEMP→RIGHT and go back to step 3 (push along left path).\n5. Continue until the stack is empty (only NULL marker remains) and TEMP is NULL.\n\nThis algorithm ensures nodes are visited in Left → Root → Right order.",
+      "keyPoints": [
+        "Push left path nodes onto stack until TEMP is NULL.",
+        "Pop a node, visit it, then explore its right subtree.",
+        "Implements Left → Root → Right without recursion."
+      ],
+      "examples": [
+        "On the example tree, this algorithm produces inorder sequence 4-2-1-7-5-8-3-6.",
+        "If a node has no left child, it is visited as soon as it is reached and its right child (if any) is then explored."
+      ]
+    },
+    {
+      "id": 38,
+      "question": "What roles do TEMP, ST, and SP play in the non-recursive traversal algorithms?",
+      "answer": "TEMP holds the current node, ST is the stack storing node addresses (often pending subtrees), and SP is the stack pointer that tracks the top of the stack.",
+      "category": "Traversal Algorithms",
+      "detailedExplanation": "The algorithms use these variables consistently:\n- TEMP: a pointer/reference to the current node being processed or examined.\n- ST: an array or stack structure that stores node addresses (pointers) that need to be revisited later (e.g., right children or ancestors with unexplored subtrees).\n- SP: the stack pointer, an index indicating the current top of the stack ST.\n\nInitialization typically sets SP to 1 and ST[SP] to NULL, serving as a sentinel marker indicating the bottom of the stack.",
+      "keyPoints": [
+        "TEMP = current node pointer.",
+        "ST = stack for storing node addresses.",
+        "SP = index for the top of the stack."
+      ],
+      "examples": [
+        "In preorder, a node’s right child is pushed onto ST using SP = SP + 1; ST[SP] = TEMP→RIGHT.",
+        "In inorder, nodes along the left path are repeatedly pushed onto ST, then popped using SP = SP − 1 when backtracking."
+      ]
+    },
+    {
+      "id": 39,
+      "question": "What constraints does the text mention about the root and successor relationships in a tree?",
+      "answer": "The root node can never be a successor of any node, and generally, a predecessor node can never be a child of its successor and vice versa.",
+      "category": "Tree Basics",
+      "detailedExplanation": "Because trees are acyclic hierarchical structures:\n- The root has no parent and thus cannot be a successor of any node.\n- Parent–child relationships flow in one direction from root downward.\n- Therefore, a predecessor (ancestor) can never be a child of its successor (descendant), which would create a cycle.\n\nThese constraints guarantee that tree structures remain acyclic and well-formed.",
+      "keyPoints": [
+        "Root is never a successor.",
+        "Predecessor cannot be a child of its successor.",
+        "Tree structures are acyclic by definition."
+      ],
+      "examples": [
+        "In a valid tree, there is no way to move from a node down to a descendant and then back up as its child.",
+        "If node B is a parent of node C, B cannot simultaneously be a child of C."
+      ]
+    },
+    {
+      "id": 40,
+      "question": "What are the example structural measures (degree, height, size) given for the sample binary tree in the text?",
+      "answer": "For the sample binary tree: Degree of Tree = 2, Height/Depth of Tree = 4, Size of Tree = 14, Depth of node M = 2, and Height of node B = 3.",
+      "category": "Tree Measures",
+      "detailedExplanation": "The text uses a specific binary tree (with nodes such as A, B, D, K, C, E, G, M, N, L, F, H, P) to illustrate multiple measures:\n- Degree of Tree: 2, since the maximum number of children any node has is 2.\n- Depth (and Height) of Tree: 4, as the longest root-to-leaf path has 4 edges.\n- Size of Tree: 14, since there are 14 nodes in total.\n- Depth of node M: 2, meaning there are 2 edges from the root to M.\n- Height of node B: 3, meaning the longest path from B down to a leaf has 3 edges.\n\nThese values exemplify how different structural metrics are computed and interpreted.",
+      "keyPoints": [
+        "Degree(tree) = 2 (binary tree).",
+        "Height(tree) = Depth(tree) = 4 edges.",
+        "Size(tree) = 14 nodes.",
+        "Depth(M) = 2, Height(B) = 3."
+      ],
+      "examples": [
+        "If the path from root A to M is A → ? → M with two edges, then depth(M) = 2.",
+        "If the longest path from B to some leaf is 3 edges, height(B) = 3."
+      ]
+    }
+  ],
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "What is the degree of a tree?",
+      "options": [
+        "The number of nodes in the tree",
+        "The number of leaves in the tree",
+        "The maximum number of children any node in the tree has",
+        "The number of edges in the longest path from root to leaf"
+      ],
+      "correctAnswer": "The maximum number of children any node in the tree has",
+      "category": "Tree Measures"
+    },
+    {
+      "id": 2,
+      "question": "In the example binary tree discussed, what is the degree of the tree?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "category": "Tree Measures"
+    },
+    {
+      "id": 3,
+      "question": "What is the depth of a node in a tree?",
+      "options": [
+        "The number of children the node has",
+        "The number of edges from the root to that node",
+        "The number of edges from that node to a leaf",
+        "The total number of nodes in its subtree"
+      ],
+      "correctAnswer": "The number of edges from the root to that node",
+      "category": "Tree Measures"
+    },
+    {
+      "id": 4,
+      "question": "What is the depth (or height) of a tree as defined in the text?",
+      "options": [
+        "Number of levels in the tree minus one",
+        "Number of edges in the longest path from the root to any leaf node",
+        "Number of nodes in the tree",
+        "Number of children of the root node"
+      ],
+      "correctAnswer": "Number of edges in the longest path from the root to any leaf node",
+      "category": "Tree Measures"
+    },
+    {
+      "id": 5,
+      "question": "What is the size of a tree?",
+      "options": [
+        "The number of leaf nodes",
+        "The maximum number of children per node",
+        "The total number of nodes in the tree",
+        "The total number of edges in the tree"
+      ],
+      "correctAnswer": "The total number of nodes in the tree",
+      "category": "Tree Measures"
+    },
+    {
+      "id": 6,
+      "question": "In the example tree, what is the size (number of nodes) given?",
+      "options": [
+        "7",
+        "10",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "14",
+      "category": "Tree Measures"
+    },
+    {
+      "id": 7,
+      "question": "What is a full binary tree?",
+      "options": [
+        "A binary tree in which all levels are completely filled",
+        "A binary tree in which every internal node has exactly two children or none",
+        "A binary tree in which all leaves are at the same level",
+        "A binary tree in which each node has at most one child"
+      ],
+      "correctAnswer": "A binary tree in which every internal node has exactly two children or none",
+      "category": "Types of Binary Trees"
+    },
+    {
+      "id": 8,
+      "question": "What is a perfect binary tree?",
+      "options": [
+        "A tree where each internal node has exactly one child",
+        "A tree in which every internal node has two children and all leaves are at the same level",
+        "A tree in which all levels except the last are full and the last is filled from left",
+        "A tree in which there is only one node"
+      ],
+      "correctAnswer": "A tree in which every internal node has two children and all leaves are at the same level",
+      "category": "Types of Binary Trees"
+    },
+    {
+      "id": 9,
+      "question": "What is a complete binary tree?",
+      "options": [
+        "A tree in which every node has exactly two children",
+        "A tree where all leaves are at the same level",
+        "A tree where all levels are completely filled except possibly the last, which is filled from the left",
+        "A tree that contains all possible binary tree shapes"
+      ],
+      "correctAnswer": "A tree where all levels are completely filled except possibly the last, which is filled from the left",
+      "category": "Types of Binary Trees"
+    },
+    {
+      "id": 10,
+      "question": "Which of the following statements about the root node is TRUE according to the text?",
+      "options": [
+        "The root node always has two children",
+        "The root node has depth 1",
+        "The root node can be a successor of exactly one node",
+        "The root node can never be a successor of any node"
+      ],
+      "correctAnswer": "The root node can never be a successor of any node",
+      "category": "Tree Basics"
+    },
+    {
+      "id": 11,
+      "question": "In the context of the text, what are sibling nodes?",
+      "options": [
+        "Nodes that have the same value",
+        "Nodes that share the same parent",
+        "Nodes that are on the same level but in different subtrees",
+        "Nodes that both have no children"
+      ],
+      "correctAnswer": "Nodes that share the same parent",
+      "category": "Tree Basics"
+    },
+    {
+      "id": 12,
+      "question": "Which of the following best defines a leaf node (external node)?",
+      "options": [
+        "A node with exactly one child",
+        "A node with no parent",
+        "A node with no children",
+        "A node with the highest degree"
+      ],
+      "correctAnswer": "A node with no children",
+      "category": "Tree Basics"
+    },
+    {
+      "id": 13,
+      "question": "What is the visiting order for preorder traversal?",
+      "options": [
+        "Left → Right → Root",
+        "Right → Left → Root",
+        "Root → Left → Right",
+        "Left → Root → Right"
+      ],
+      "correctAnswer": "Root → Left → Right",
+      "category": "Tree Traversal"
+    },
+    {
+      "id": 14,
+      "question": "What is the visiting order for inorder traversal?",
+      "options": [
+        "Root → Left → Right",
+        "Left → Root → Right",
+        "Right → Root → Left",
+        "Left → Right → Root"
+      ],
+      "correctAnswer": "Left → Root → Right",
+      "category": "Tree Traversal"
+    },
+    {
+      "id": 15,
+      "question": "What is the visiting order for postorder traversal?",
+      "options": [
+        "Left → Right → Root",
+        "Root → Left → Right",
+        "Right → Left → Root",
+        "Left → Root → Right"
+      ],
+      "correctAnswer": "Left → Right → Root",
+      "category": "Tree Traversal"
+    },
+    {
+      "id": 16,
+      "question": "For the example tree in the text, which of the following is the correct preorder traversal?",
+      "options": [
+        "1-2-4-3-5-7-8-6",
+        "4-2-1-7-5-8-3-6",
+        "4-2-7-8-5-6-3-1",
+        "1-3-6-5-8-7-2-4"
+      ],
+      "correctAnswer": "1-2-4-3-5-7-8-6",
+      "category": "Tree Traversal"
+    },
+    {
+      "id": 17,
+      "question": "For the example tree in the text, which of the following is the correct inorder traversal?",
+      "options": [
+        "1-2-4-3-5-7-8-6",
+        "4-2-1-7-5-8-3-6",
+        "4-2-7-8-5-6-3-1",
+        "6-3-8-5-7-1-2-4"
+      ],
+      "correctAnswer": "4-2-1-7-5-8-3-6",
+      "category": "Tree Traversal"
+    },
+    {
+      "id": 18,
+      "question": "For the example tree in the text, which of the following is the correct postorder traversal?",
+      "options": [
+        "1-2-4-3-5-7-8-6",
+        "4-2-1-7-5-8-3-6",
+        "4-2-7-8-5-6-3-1",
+        "6-3-8-5-7-1-4-2"
+      ],
+      "correctAnswer": "4-2-7-8-5-6-3-1",
+      "category": "Tree Traversal"
+    },
+    {
+      "id": 19,
+      "question": "In the non-recursive preorder traversal algorithm described, what is pushed onto the stack?",
+      "options": [
+        "Left children of nodes",
+        "Right children of nodes",
+        "All nodes in level order",
+        "Leaf nodes only"
+      ],
+      "correctAnswer": "Right children of nodes",
+      "category": "Traversal Algorithms"
+    },
+    {
+      "id": 20,
+      "question": "In the non-recursive inorder traversal algorithm described, what is the first repeated action in the main loop?",
+      "options": [
+        "Visiting the current node",
+        "Pushing right children onto the stack",
+        "Pushing nodes while moving down the leftmost path",
+        "Popping nodes immediately when TEMP is not NULL"
+      ],
+      "correctAnswer": "Pushing nodes while moving down the leftmost path",
+      "category": "Traversal Algorithms"
+    },
+    {
+      "id": 21,
+      "question": "What does the TEMP pointer represent in the traversal algorithms?",
+      "options": [
+        "The parent of the current node",
+        "The root of the entire tree",
+        "The current node being processed or explored",
+        "The last visited leaf node"
+      ],
+      "correctAnswer": "The current node being processed or explored",
+      "category": "Traversal Algorithms"
+    },
+    {
+      "id": 22,
+      "question": "In doubly linked list traversal, what condition is used to terminate the traversal loop?",
+      "options": [
+        "Ptr == Start",
+        "Ptr == NULL",
+        "Ptr->right == Start",
+        "Ptr->data == 0"
+      ],
+      "correctAnswer": "Ptr == NULL",
+      "category": "Linked List"
+    }
+  ]
+}
