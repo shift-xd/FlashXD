@@ -1,0 +1,546 @@
+{
+  "deckName": "Big O Notation – Full Notes (English)",
+  "flashcards": [
+    {
+      "id": 1,
+      "question": "What is Big O Notation?",
+      "answer": "Big O Notation is a mathematical way to describe the time and space complexity of an algorithm as the input size grows, focusing on its worst-case performance.",
+      "category": "Big O Basics",
+      "detailedExplanation": "Big O Notation is used in computer science to analyze how an algorithm scales as the input size increases. Instead of measuring actual time in seconds, Big O counts the number of basic operations and expresses the running time or memory usage as a function of the input size n.\n\nIt focuses on the trend of growth, ignoring constant factors and lower-order terms, to compare algorithms independently of hardware or programming language. Big O usually describes the worst-case scenario, helping developers understand the maximum time or space an algorithm might need.",
+      "keyPoints": [
+        "Describes time and space complexity of algorithms",
+        "Expressed as a function of input size n",
+        "Focuses on worst-case performance",
+        "Helps compare how algorithms scale as input grows"
+      ],
+      "examples": [
+        "O(n) means the time grows roughly in proportion to the input size",
+        "O(n2) means time grows roughly with the square of the input size"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Why is Big O Notation important?",
+      "answer": "Big O Notation is important because it helps compare algorithm efficiency, choose the best algorithm, predict performance for large inputs, and design scalable programs.",
+      "category": "Big O Basics",
+      "detailedExplanation": "Big O Notation is a key tool for evaluating and comparing algorithms. By expressing how running time or memory usage grows with input size, it allows developers to:\n\n1) Compare different algorithms that solve the same problem.\n2) Predict how an algorithm will behave when input size becomes very large.\n3) Identify performance bottlenecks and choose more efficient approaches.\n4) Design systems that remain usable and fast as data and users grow.\n\nBecause real-world applications often deal with large inputs, understanding Big O helps ensure that programs are scalable and efficient.",
+      "keyPoints": [
+        "Helps compare efficiency of different algorithms",
+        "Allows prediction of performance on large inputs",
+        "Guides the choice of the most suitable algorithm",
+        "Supports building scalable, high-performance systems"
+      ],
+      "examples": [
+        "Choosing binary search (O(log n)) over linear search (O(n)) for large sorted lists",
+        "Preferring merge sort (O(n log n)) over bubble sort (O(n2)) for large arrays"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is time complexity?",
+      "answer": "Time complexity is the number of operations an algorithm performs, expressed as a function of the input size n.",
+      "category": "Time Complexity",
+      "detailedExplanation": "Time complexity measures how the running time of an algorithm grows as the size of the input increases. Instead of using actual clock time, it counts basic steps or operations, such as comparisons, assignments, or arithmetic operations.\n\nThis complexity is written as a function of the input size n. For example, if n is the size of an array, then an algorithm that examines each element once has a time complexity of O(n). Time complexity abstracts away hardware and implementation details, allowing fair comparison between algorithms.",
+      "keyPoints": [
+        "Measures number of operations, not actual seconds",
+        "Expressed as a function of input size n",
+        "Shows how running time grows as n increases",
+        "Independent of specific hardware or language"
+      ],
+      "examples": [
+        "Looping through an array of size n once: O(n)",
+        "Checking only the first element of an array: O(1)"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is space complexity?",
+      "answer": "Space complexity is the amount of memory an algorithm uses, expressed as a function of the input size n.",
+      "category": "Space Complexity",
+      "detailedExplanation": "Space complexity measures how much extra memory an algorithm needs as the input size grows. It includes:\n\n1) Memory for variables and constants.\n2) Memory used by data structures such as arrays, lists, or trees.\n3) Memory used by function calls and the recursive call stack.\n\nLike time complexity, space complexity is expressed as a function of n, the size of the input. This helps developers understand whether an algorithm is memory-efficient and can handle large data sets without running out of space.",
+      "keyPoints": [
+        "Measures memory used by an algorithm",
+        "Includes variables, data structures, and stack space",
+        "Expressed as a function of input size n",
+        "Helps evaluate memory efficiency"
+      ],
+      "examples": [
+        "Using only a few variables regardless of input size: O(1) space",
+        "Storing n elements in an array: O(n) space"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What are some common Big O time complexities?",
+      "answer": "Common Big O time complexities include O(1), O(log n), O(n), O(n log n), O(n2), O(n3), O(2^n), and O(n!).",
+      "category": "Time Complexity",
+      "detailedExplanation": "Algorithms are often classified by how their running time grows with input size. Some standard Big O time complexities are:\n\n- O(1) – Constant time: Running time does not change with input size.\n- O(log n) – Logarithmic time: Running time grows slowly; often seen in divide-and-conquer algorithms like binary search.\n- O(n) – Linear time: Running time grows directly with input size.\n- O(n log n) – Linearithmic time: Common in efficient sorting algorithms.\n- O(n2) – Quadratic time: Often caused by nested loops over the same data.\n- O(n3) – Cubic time: Typically from three nested loops.\n- O(2^n) – Exponential time: Doubles with each additional input element.\n- O(n!) – Factorial time: Grows extremely fast, usually impractical for large n.",
+      "keyPoints": [
+        "O(1): constant time",
+        "O(log n): logarithmic time",
+        "O(n), O(n log n): common practical complexities",
+        "O(n2), O(2^n), O(n!): can be very slow for large n"
+      ],
+      "examples": [
+        "Accessing an array element: O(1)",
+        "Binary search: O(log n)",
+        "Merge sort: O(n log n)",
+        "Bubble sort: O(n2)",
+        "Recursive Fibonacci (naive): O(2^n)"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What does O(1) time complexity mean?",
+      "answer": "O(1) time complexity means the algorithm takes constant time, independent of the input size.",
+      "category": "Time Complexity",
+      "detailedExplanation": "An algorithm with O(1) time complexity performs a fixed number of operations no matter how large the input is. The running time does not grow with n.\n\nEven if the constant time is large (for example, 100 operations), it is still considered O(1) because the number of operations does not increase when n increases. O(1) algorithms are the fastest in terms of growth rate.",
+      "keyPoints": [
+        "Running time does not change with input size",
+        "Performs a constant number of operations",
+        "Most efficient growth rate",
+        "Independent of n"
+      ],
+      "examples": [
+        "Accessing arr[0] in an array: int x = arr[0];",
+        "Checking if a stack is empty when top is stored in a variable"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What does O(n) time complexity mean?",
+      "answer": "O(n) time complexity means the running time grows linearly with the input size n.",
+      "category": "Time Complexity",
+      "detailedExplanation": "An algorithm with O(n) time complexity performs work proportional to the size of the input. If you double the input size, the running time roughly doubles as well.\n\nThis commonly occurs when you have a single loop that visits each element once. Linear time is usually acceptable for large inputs, as long as n is not extremely big.",
+      "keyPoints": [
+        "Running time increases directly with input size",
+        "Typical of a single loop over all elements",
+        "Considered efficient for many practical problems",
+        "Scales linearly: 2n input → ~2x time"
+      ],
+      "examples": [
+        "Loop through an array: for (int i = 0; i < n; i++) { System.out.println(i); }",
+        "Linear search in an unsorted array"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What does O(n2) time complexity mean?",
+      "answer": "O(n2) time complexity means the running time grows proportionally to the square of the input size n, often due to nested loops.",
+      "category": "Time Complexity",
+      "detailedExplanation": "An algorithm with O(n2) time complexity performs work proportional to n squared. If you double the input size, the running time roughly becomes four times larger, because (2n)2 = 4n2.\n\nThis usually appears when you have two nested loops that both depend on n. Quadratic time can become slow for large n and is generally less scalable than O(n) or O(n log n).",
+      "keyPoints": [
+        "Running time scales with the square of n",
+        "Often caused by two nested loops over the same data",
+        "Becomes slow for large inputs",
+        "Less scalable than linear or linearithmic time"
+      ],
+      "examples": [
+        "Nested loops: for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { System.out.println(i + j); } }",
+        "Simple implementations of bubble sort or selection sort"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What is O(log n) time complexity and where does it commonly appear?",
+      "answer": "O(log n) time complexity means the running time grows logarithmically with n and commonly appears in binary search and divide-and-conquer algorithms.",
+      "category": "Time Complexity",
+      "detailedExplanation": "In O(log n) time complexity, the amount of work grows very slowly compared to n. Each step typically cuts the problem size by a constant factor, often by half.\n\nBinary search is a classic example: each comparison removes half of the remaining search space. As a result, even for very large n, the number of steps remains relatively small.",
+      "keyPoints": [
+        "Running time grows very slowly as n increases",
+        "Often involves repeatedly dividing the problem size",
+        "Typical in binary search and balanced tree operations",
+        "Efficient for large inputs"
+      ],
+      "examples": [
+        "Binary search in a sorted array",
+        "Operations (insert, search) in balanced binary search trees like AVL or red-black trees"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What is O(n log n) time complexity and which algorithms commonly have it?",
+      "answer": "O(n log n) time complexity means the running time grows slightly faster than linear and is common in efficient sorting algorithms like merge sort and average-case quick sort.",
+      "category": "Time Complexity",
+      "detailedExplanation": "O(n log n) algorithms combine linear work with a logarithmic factor, often using divide-and-conquer. The input is divided into smaller parts (log n levels), and each level processes all n elements.\n\nMany optimal comparison-based sorting algorithms have O(n log n) time complexity, making this complexity very important in practice.",
+      "keyPoints": [
+        "Combines linear and logarithmic growth",
+        "Typical for efficient comparison-based sorting algorithms",
+        "Much better than O(n2) for large inputs",
+        "Often results from divide-and-conquer strategies"
+      ],
+      "examples": [
+        "Merge sort: O(n log n)",
+        "Quick sort average case: O(n log n)",
+        "Heap sort: O(n log n)"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "What are best case, average case, and worst case in time complexity?",
+      "answer": "Best case is the minimum time, average case is the expected time, and worst case (Big O) is the maximum time an algorithm takes for inputs of size n.",
+      "category": "Time Complexity",
+      "detailedExplanation": "Time complexity can be analyzed in different scenarios:\n\n- Best case: The algorithm finishes in the least possible time for some input of size n.\n- Average case: The expected running time over all possible inputs of size n, often assuming a probability distribution.\n- Worst case: The longest running time for any input of size n.\n\nBig O notation usually focuses on worst-case behavior because it guarantees an upper bound on running time, which is important for reliability and performance guarantees.",
+      "keyPoints": [
+        "Best case: minimum running time",
+        "Average case: expected running time",
+        "Worst case: maximum running time",
+        "Big O usually describes worst-case performance"
+      ],
+      "examples": [
+        "Linear search: best case O(1) (element found at first position)",
+        "Linear search: worst case O(n) (element not found or at last position)"
+      ]
+    },
+    {
+      "id": 12,
+      "question": "What is Rule 1 for calculating Big O (ignoring constants)?",
+      "answer": "Rule 1 says that constant factors are ignored in Big O, so O(2n) becomes O(n) and O(100) becomes O(1).",
+      "category": "Big O Rules",
+      "detailedExplanation": "When calculating Big O, constant multipliers and fixed costs do not affect the growth trend as n becomes large. Therefore:\n\n- O(2n) and O(5n) are both written as O(n).\n- O(100) or any fixed number of operations is written as O(1).\n\nThis rule focuses on the dominant growth behavior as n grows and ignores constant differences that are less important for large inputs.",
+      "keyPoints": [
+        "Constant multipliers are removed in Big O",
+        "O(2n), O(10n) → O(n)",
+        "Any fixed amount of work → O(1)",
+        "Emphasizes growth trend over exact operation counts"
+      ],
+      "examples": [
+        "A loop that runs 3n times is O(n)",
+        "Performing 1000 fixed operations is O(1)"
+      ]
+    },
+    {
+      "id": 13,
+      "question": "What is Rule 2 for calculating Big O (dropping lower-order terms)?",
+      "answer": "Rule 2 says that lower-order terms are dropped, so O(n2 + n) becomes O(n2) and O(n + log n) becomes O(n).",
+      "category": "Big O Rules",
+      "detailedExplanation": "In Big O notation, only the term that grows the fastest as n increases is kept. Lower-order terms eventually become insignificant for large n.\n\nFor example:\n- In O(n2 + n), the n2 term dominates, so we write O(n2).\n- In O(n + log n), the linear term n dominates, so we write O(n).\n\nThis rule simplifies expressions and focuses on the dominant part that determines the algorithm's scalability.",
+      "keyPoints": [
+        "Keep only the highest-order term in Big O",
+        "Lower-order terms become negligible for large n",
+        "O(n2 + n) → O(n2)",
+        "O(n + log n) → O(n)"
+      ],
+      "examples": [
+        "An algorithm with n2 + 10n + 5 operations is O(n2)",
+        "An algorithm with n + 100log n operations is O(n)"
+      ]
+    },
+    {
+      "id": 14,
+      "question": "What is Rule 3 for calculating Big O with different input sizes?",
+      "answer": "Rule 3 states that different independent inputs should use different variables, such as O(n + m) when processing two separate collections.",
+      "category": "Big O Rules",
+      "detailedExplanation": "When an algorithm has multiple independent inputs, you cannot always combine them into a single variable. Instead, each distinct input size should have its own variable.\n\nFor example, if an algorithm processes an array of size n and another array of size m separately, the time complexity is O(n + m). This more accurately reflects the work done on each input.",
+      "keyPoints": [
+        "Use separate variables for independent input sizes",
+        "Do not incorrectly combine n and m into a single n",
+        "O(n + m) means work is proportional to both n and m",
+        "More precise for multi-input algorithms"
+      ],
+      "examples": [
+        "Loop through array A of size n and then array B of size m: O(n + m)",
+        "Nested loops over two different arrays: O(n * m)"
+      ]
+    },
+    {
+      "id": 15,
+      "question": "What is an example of O(1) space complexity?",
+      "answer": "An example of O(1) space complexity is using a single variable, such as int a = 10; regardless of input size.",
+      "category": "Space Complexity",
+      "detailedExplanation": "O(1) space complexity means the algorithm uses a fixed amount of memory that does not change with the input size. This includes a constant number of variables or a small, fixed-size buffer.\n\nEven if the input size grows, the extra memory used by the algorithm remains constant.",
+      "keyPoints": [
+        "Uses a constant, fixed amount of memory",
+        "Independent of input size n",
+        "Often involves just a few primitive variables",
+        "Most memory-efficient growth rate"
+      ],
+      "examples": [
+        "int a = 10; uses O(1) extra space",
+        "Swapping two variables using a temporary variable"
+      ]
+    },
+    {
+      "id": 16,
+      "question": "What is an example of O(n) space complexity?",
+      "answer": "An example of O(n) space complexity is creating an array of size n, such as int[] arr = new int[n];",
+      "category": "Space Complexity",
+      "detailedExplanation": "O(n) space complexity means the memory used grows directly with the input size n. If you double n, the extra memory roughly doubles.\n\nThis commonly occurs when you store all n input elements or create data structures proportional to the input size.",
+      "keyPoints": [
+        "Memory usage grows linearly with n",
+        "Common when storing n elements",
+        "Scales directly with input size",
+        "Can become large for big inputs"
+      ],
+      "examples": [
+        "int[] arr = new int[n]; uses O(n) space",
+        "Storing all n nodes in a linked list"
+      ]
+    },
+    {
+      "id": 17,
+      "question": "What is recursive space complexity, for example in factorial(n)?",
+      "answer": "Recursive space complexity counts the memory used by the call stack; for factorial(n) it is O(n) space because there are n recursive calls on the stack.",
+      "category": "Space Complexity",
+      "detailedExplanation": "When an algorithm uses recursion, each recursive call adds a new frame to the call stack, which consumes memory. The depth of recursion therefore affects space complexity.\n\nFor a simple recursive factorial function, factorial(n) calls factorial(n-1), then factorial(n-2), and so on until factorial(1). This results in n stack frames, so the space complexity is O(n).",
+      "keyPoints": [
+        "Recursive calls use stack space",
+        "Space complexity depends on recursion depth",
+        "factorial(n) has O(n) recursive space",
+        "Must consider both data structures and call stack"
+      ],
+      "examples": [
+        "Recursive factorial: depth n → O(n) space",
+        "Recursive Fibonacci (naive) has O(n) stack space due to call depth"
+      ]
+    },
+    {
+      "id": 18,
+      "question": "What are the time complexities of some common algorithms like searches and simple sorts?",
+      "answer": "Common time complexities: Linear search is O(n); binary search is O(log n); bubble sort, selection sort, and insertion sort are O(n2).",
+      "category": "Algorithms and Big O",
+      "detailedExplanation": "Different algorithms for searching and sorting have different Big O time complexities:\n\n- Linear search: O(n), because it may check each element one by one.\n- Binary search: O(log n), by repeatedly dividing a sorted array in half.\n- Bubble sort: O(n2), due to repeated passes and comparisons with nested loops.\n- Selection sort: O(n2), selecting the minimum for each position using nested loops.\n- Insertion sort: O(n2) in the average and worst case, shifting elements for each insertion.\n\nUnderstanding these helps in choosing suitable algorithms for a given use case.",
+      "keyPoints": [
+        "Linear search: O(n)",
+        "Binary search: O(log n)",
+        "Bubble, selection, insertion sort: O(n2)",
+        "Efficiency differences matter for large n"
+      ],
+      "examples": [
+        "Using linear search on an unsorted array of 1,000,000 elements can be slow",
+        "Using binary search on a sorted array drastically reduces comparisons"
+      ]
+    },
+    {
+      "id": 19,
+      "question": "What are the time complexities of merge sort, quick sort, and heap sort?",
+      "answer": "Merge sort, average-case quick sort, and heap sort all have O(n log n) time complexity.",
+      "category": "Algorithms and Big O",
+      "detailedExplanation": "Several efficient sorting algorithms run in O(n log n) time:\n\n- Merge sort: Always O(n log n), using a divide-and-conquer strategy by splitting and merging.\n- Quick sort: Average-case O(n log n), but worst-case O(n2) if pivots are chosen poorly.\n- Heap sort: O(n log n), using a heap data structure to repeatedly extract the maximum or minimum.\n\nThese algorithms are much faster than O(n2) sorts on large datasets and are widely used in practice.",
+      "keyPoints": [
+        "Merge sort: O(n log n) in all cases",
+        "Quick sort: O(n log n) average, O(n2) worst",
+        "Heap sort: O(n log n)",
+        "Preferred over O(n2) sorts for large inputs"
+      ],
+      "examples": [
+        "Standard library sorting functions often use algorithms with O(n log n) behavior",
+        "Sorting a million elements with merge sort is far faster than with bubble sort"
+      ]
+    },
+    {
+      "id": 20,
+      "question": "How do common Big O complexities compare in growth rate?",
+      "answer": "They grow in this order: O(1) < O(log n) < O(n) < O(n log n) < O(n2) < O(2^n) < O(n!).",
+      "category": "Big O Comparison",
+      "detailedExplanation": "Different Big O complexities grow at different speeds as n increases. From slowest to fastest growth:\n\n- O(1): Constant time, no growth with n.\n- O(log n): Very slow growth.\n- O(n): Linear growth.\n- O(n log n): Slightly faster than linear.\n- O(n2): Quadratic, grows much faster for large n.\n- O(2^n): Exponential, doubles for each increase in n.\n- O(n!): Factorial, grows extremely fast and is usually impractical.\n\nUnderstanding this order helps quickly estimate which algorithms will scale better.",
+      "keyPoints": [
+        "O(1) is the best, O(n!) is the worst for large n",
+        "Logarithmic and linear are generally efficient",
+        "Quadratic and higher can become infeasible quickly",
+        "Growth rate comparison guides algorithm choice"
+      ],
+      "examples": [
+        "An O(n) algorithm is preferable to an O(n2) one for large inputs",
+        "Exponential and factorial algorithms are usually limited to small n"
+      ]
+    },
+    {
+      "id": 21,
+      "question": "What is the difference between Big O, Big Ω, and Big Θ?",
+      "answer": "Big O describes an upper bound (worst case), Big Ω describes a lower bound (best case), and Big Θ describes a tight bound (exact growth rate).",
+      "category": "Asymptotic Notation",
+      "detailedExplanation": "There are three common asymptotic notations:\n\n- Big O (O): Gives an upper bound on growth; it describes the worst-case or maximum time for large n.\n- Big Omega (Ω): Gives a lower bound; it describes the best-case or minimum time for large n.\n- Big Theta (Θ): Gives a tight bound; it means the algorithm grows at that rate in both upper and lower bounds.\n\nBig O is the most commonly used notation in practice, especially for worst-case analysis.",
+      "keyPoints": [
+        "Big O: upper bound (worst-case complexity)",
+        "Big Ω: lower bound (best-case complexity)",
+        "Big Θ: tight bound (exact asymptotic behavior)",
+        "Big O is most commonly used for algorithm analysis"
+      ],
+      "examples": [
+        "An algorithm that always takes exactly 3n steps is O(n), Ω(n), and Θ(n)",
+        "Linear search: best case Ω(1), worst case O(n)"
+      ]
+    },
+    {
+      "id": 22,
+      "question": "What is a real-life example of O(log n) vs O(n) searching?",
+      "answer": "Searching a phone book by name is like O(log n) (binary search), while searching an unsorted list is like O(n) (linear search).",
+      "category": "Real-Life Analogy",
+      "detailedExplanation": "In a phone book or alphabetically sorted contact list, names are arranged in order. You can open near the middle, compare, then go left or right, repeatedly narrowing down the search. This is similar to binary search and runs in O(log n) time.\n\nIn contrast, searching an unsorted list forces you to check each item one by one until you find the target or reach the end. This is similar to linear search and has O(n) time complexity.",
+      "keyPoints": [
+        "Sorted phone book search is similar to binary search (O(log n))",
+        "Unsorted list search is similar to linear search (O(n))",
+        "Sorting enables faster search algorithms",
+        "Real-world analogy helps visualize growth rates"
+      ],
+      "examples": [
+        "Finding a friend’s number in a sorted directory using middle checks",
+        "Scanning every name on a handwritten, unsorted list"
+      ]
+    },
+    {
+      "id": 23,
+      "question": "What key points about Big O should you remember for exams?",
+      "answer": "For exams, remember the definition of Big O, rules for simplifying it, common complexities with examples, comparison of growth rates, and how to analyze code snippets.",
+      "category": "Exam Preparation",
+      "detailedExplanation": "For exam purposes, you should be comfortable with:\n\n1) Defining Big O and explaining that it describes time and space complexity, usually in the worst case.\n2) Applying rules: ignoring constants, dropping lower-order terms, and using different variables for different inputs.\n3) Recognizing common complexities (O(1), O(log n), O(n), O(n log n), O(n2), O(2^n), O(n!)) and matching them with typical algorithms.\n4) Comparing growth rates and explaining which algorithms scale better.\n5) Reading simple code and determining its time and space complexity by counting loops, nested loops, and data structures.",
+      "keyPoints": [
+        "Know Big O definition and purpose",
+        "Apply simplification rules correctly",
+        "Memorize common Big O classes and examples",
+        "Be able to analyze simple code for time and space complexity"
+      ],
+      "examples": [
+        "Identifying a single loop as O(n) and nested loops as O(n2)",
+        "Explaining why merge sort is O(n log n) while bubble sort is O(n2)"
+      ]
+    }
+  ],
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "What does Big O Notation primarily describe?",
+      "options": [
+        "Syntax of a programming language",
+        "Time and space complexity of an algorithm",
+        "Number of lines of code",
+        "Amount of disk space used by source files"
+      ],
+      "correctAnswer": "Time and space complexity of an algorithm",
+      "category": "Big O Basics"
+    },
+    {
+      "id": 2,
+      "question": "Which of the following best describes time complexity?",
+      "options": [
+        "The total memory used by all programs on a computer",
+        "The number of operations an algorithm performs as a function of input size n",
+        "The speed of the CPU",
+        "The number of bugs in the source code"
+      ],
+      "correctAnswer": "The number of operations an algorithm performs as a function of input size n",
+      "category": "Time Complexity"
+    },
+    {
+      "id": 3,
+      "question": "Which complexity represents constant time?",
+      "options": [
+        "O(n)",
+        "O(1)",
+        "O(log n)",
+        "O(n2)"
+      ],
+      "correctAnswer": "O(1)",
+      "category": "Time Complexity"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following algorithms typically has O(log n) time complexity?",
+      "options": [
+        "Linear search in an unsorted array",
+        "Binary search in a sorted array",
+        "Bubble sort",
+        "Selection sort"
+      ],
+      "correctAnswer": "Binary search in a sorted array",
+      "category": "Algorithms and Big O"
+    },
+    {
+      "id": 5,
+      "question": "What is the time complexity of a simple loop that runs from i = 0 to i < n?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n2)"
+      ],
+      "correctAnswer": "O(n)",
+      "category": "Time Complexity"
+    },
+    {
+      "id": 6,
+      "question": "What is the typical time complexity of bubble sort?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n2)"
+      ],
+      "correctAnswer": "O(n2)",
+      "category": "Algorithms and Big O"
+    },
+    {
+      "id": 7,
+      "question": "Which of the following sorting algorithms has average-case time complexity O(n log n)?",
+      "options": [
+        "Bubble sort",
+        "Selection sort",
+        "Quick sort",
+        "Insertion sort"
+      ],
+      "correctAnswer": "Quick sort",
+      "category": "Algorithms and Big O"
+    },
+    {
+      "id": 8,
+      "question": "According to Rule 1 of Big O, O(5n) should be simplified to:",
+      "options": [
+        "O(5)",
+        "O(n)",
+        "O(n2)",
+        "O(1)"
+      ],
+      "correctAnswer": "O(n)",
+      "category": "Big O Rules"
+    },
+    {
+      "id": 9,
+      "question": "According to Rule 2 of Big O, O(n2 + n) simplifies to:",
+      "options": [
+        "O(n)",
+        "O(n2)",
+        "O(2n2)",
+        "O(1)"
+      ],
+      "correctAnswer": "O(n2)",
+      "category": "Big O Rules"
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is the correct order of growth from fastest (best) to slowest (worst) as n increases?",
+      "options": [
+        "O(n) < O(1) < O(log n)",
+        "O(1) < O(log n) < O(n) < O(n2)",
+        "O(log n) < O(1) < O(n) < O(n2)",
+        "O(1) < O(n2) < O(log n) < O(n)"
+      ],
+      "correctAnswer": "O(1) < O(log n) < O(n) < O(n2)",
+      "category": "Big O Comparison"
+    },
+    {
+      "id": 11,
+      "question": "What does Big Ω (Big Omega) represent?",
+      "options": [
+        "The upper bound (worst-case time)",
+        "The exact bound",
+        "The lower bound (best-case time)",
+        "The memory complexity only"
+      ],
+      "correctAnswer": "The lower bound (best-case time)",
+      "category": "Asymptotic Notation"
+    },
+    {
+      "id": 12,
+      "question": "If an algorithm uses an array of size n, what is its space complexity for that array?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n2)"
+      ],
+      "correctAnswer": "O(n)",
+      "category": "Space Complexity"
+    }
+  ]
+}
